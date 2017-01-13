@@ -1,0 +1,108 @@
+@import "layouts/sass/variables";
+
+.jobs-search-form {
+    .el-form-item {
+        margin-bottom: 0;
+        .icon-shaixuan, .icon-sort {
+            font-size: 24px;
+            color: #ccc;
+        }
+    }
+    .more {
+        .el-form-item__content {
+            .iconfont {
+                margin-right: 5px;
+            }
+        }
+    }
+    .icon-gongju {
+        font-size: 28px;
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        color: $brand-primary;
+        margin-left: 15px;
+    }
+}
+
+.jobs-list {
+    > ul {
+        > li {
+            margin-bottom: 15px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 1px 2px 0 #e4e4e4;
+            border-radius: 2px;
+            .all-check{
+                .el-checkbox{
+                    padding-top: 35px;
+                }
+            }
+            .msg{
+                margin: 10px 0;
+            }
+            .info {
+                h3 {
+                    display: inline;
+                }
+                span, i {
+                    margin: 0 3px;
+                }
+                .iconfont {
+                    color: $gray-lighter;
+                }
+                .process {
+                    padding: 10px 0;
+                    div.step {
+                        position: relative;
+                        margin-right: 10px;
+                        height: 2px;
+                        background-color: #f2f2f2;
+                        &.last {
+                            background-color: #fff;
+                        }
+                        div.inner {
+                            position: absolute;
+                            top: -9px;
+                            left: 0;
+                            background-color: #fff;
+                            padding-right: 10px;
+                            .icon-right{
+                                color:$brand-success;
+                                font-size: 14px;
+                            }
+                            .icon-gantanhao{
+                                color:$brand-danger;
+                                font-size: 14px;
+                            }
+                            .text-success{
+                                margin-left: -5px;
+                            }
+                            i.icon-yuan {
+                                display: inline-block;
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 50%;
+                                background-color: $brand-primary;
+                            }
+                        }
+                    }
+                }
+            }
+            .tags{
+                .tag{
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 5px;
+                    border:2px solid $brand-info;
+                    color:$brand-info;
+                    font-size: $font-size-h6;
+                    border-radius: 50%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

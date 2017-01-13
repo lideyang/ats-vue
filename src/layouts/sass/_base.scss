@@ -1,0 +1,300 @@
+// Body reset
+@import "variables";
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $text-color;
+    background-color: $body-bg;
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+// Links
+
+a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+    }
+
+    &:focus {
+        @include tab-focus;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+// Images
+
+img {
+    vertical-align: middle;
+}
+
+hr {
+    margin-top: $line-height-computed;
+    margin-bottom: $line-height-computed;
+    border: 0;
+    border-top: 1px solid $hr-border;
+}
+
+.panel {
+    padding: 10px 20px;
+    background: #fff;
+    border: 1px solid #e7e7eb;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.page-content {
+    padding: 20px;
+}
+
+//form
+.el-form {
+    .el-form-item {
+        .el-select {
+            width: 150px;
+        }
+    }
+}
+
+.el-form-item {
+    height: 30px;
+    line-height: 30px;
+}
+
+.el-input__inner {
+    padding: 0 10px;
+    height: 30px;
+}
+
+.el-form-item__content {
+    line-height: 30px;
+}
+
+.el-form-item__label {
+    padding: 7px 12px 7px 0;
+}
+
+.el-checkbox {
+    padding: 4px 0;
+}
+
+//button
+.el-button {
+    padding: 7px 10px;
+    vertical-align: middle;
+    > span {
+        display: inline-block;
+        i {
+            display: inline-block;
+        }
+    }
+}
+
+.el-button.radius {
+    border-radius: 16px;
+}
+
+.el-button.icon {
+    padding: 4px;
+    > span {
+        > i {
+            font-size: 20px;
+            color: $gray-light;
+        }
+    }
+}
+
+//reset
+.el-button--default, .el-form-item__label {
+    color: $gray;
+}
+
+//common
+.page-wrapper {
+    .p-layout-topbar {
+        position: fixed;
+        width: 100%;
+        background-color: $brand-primary;
+        z-index: 101;
+        color: #fff;
+        //header
+        .page-header {
+            background-color: $brand-primary;
+            padding: 0 20px;
+            .logo {
+                margin: 10px 0 0;
+                font-size: 24px;
+                font-weight: bold;
+                color: #fff;
+                .icon-menu {
+                    color: #fff;
+                    font-size: 24px;
+                }
+                span.title {
+                    margin-left: 10px;
+                    vertical-align: middle;
+                }
+            }
+            .user-menu {
+                float: right;
+                .el-menu-item, .el-menu-item.active, .el-submenu__title {
+                    color: #fff;
+                }
+                .el-menu-item:hover {
+                    border-bottom-color: #fff;
+                }
+                .el-submenu__title {
+                    > i {
+                        color: #fff;
+                    }
+                    .el-badge__content.is-fixed {
+                        top: 15px;
+                    }
+                }
+                .el-submenu {
+                    .el-menu {
+                        width: 140px;
+                        padding: 0;
+                        .el-menu-item {
+                            color: $gray;
+                            height: 42px;
+                            text-align: center;
+                            &.active {
+                                border-bottom: 1px solid $gray-lighter;
+                                line-height: 42px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+                    &.user-msg-list {
+                        .el-menu {
+                            width: 200px;
+                            .el-menu-item {
+                                &.active {
+                                    padding: 5px 10px;
+                                    height: auto;
+                                }
+                                p {
+                                    margin: 0;
+                                    height: 28px;
+                                    line-height: 28px;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+                .headerUserAvatar {
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 18px;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .p-layout-body {
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        bottom: 0;
+        z-index: 100;
+        .p-layout-sider {
+            width: 180px;
+            background-color: #fff;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            height: 100%;
+            transition: all .3s ease;
+            z-index: 102;
+            overflow-x: hidden;
+        }
+        .p-layout-content, .p-layout-panel {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            overflow: hidden;
+            transition: all .3s ease;
+            width: auto;
+        }
+        .p-layout-panel {
+            left: 180px;
+            .p-layout-content {
+                overflow-y: auto;
+            }
+        }
+    }
+    //left-menu
+    .left-menu {
+        background-color: #fff;
+        box-shadow: 1px 0 4px 0 #d5d5d5;
+        padding-top: 20px;
+        .el-menu-item, .el-submenu {
+            border-bottom: 1px solid #f2f2f2;
+            padding-right: 0;
+            & .el-submenu__icon-arrow {
+                right: 15px;
+            }
+        }
+        .el-submenu:last-child{
+            border-bottom: none;
+        }
+        .el-menu-item.active, .el-submenu.active {
+            border-left: 4px solid $brand-primary;
+            color: $brand-primary;
+            background-color: #ebf4ff;
+            border-bottom: none;
+            margin-right: 0;
+            padding-left: 16px !important;
+        }
+        .el-menu-item {
+            .iconfont {
+                &.icon-jobs {
+                    font-size: 20px;
+                    margin: 0 10px 0 -2px;
+                    color: #9b9b9b;
+                }
+            }
+        }
+        .el-submenu {
+            .el-submenu__title {
+                padding-right: 0;
+                .iconfont {
+                    margin-right: 10px;
+                    color: #9b9b9b;
+                }
+            }
+        }
+    }
+}
+
+
