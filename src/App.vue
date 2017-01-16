@@ -37,7 +37,6 @@
             LeftMenu
         },
 
-
         methods: mapActions(['getCurrentUser']),
 
         computed: mapState({

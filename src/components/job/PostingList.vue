@@ -108,11 +108,15 @@
         name: 'PostingList',
         props: {
             items: Array,
+
             pageNo: {
                 type: Number,
                 default: 1
             },
-
+            allChecked: {
+                type: Boolean,
+                default: false
+            },
             pageSize: {
                 type: Number,
                 default: 10

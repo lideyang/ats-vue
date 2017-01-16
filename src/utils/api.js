@@ -53,7 +53,7 @@ const checkRespStatus = (respPromise) =>{
 
 //vuex action
 export const createAction = (type, payloadCreator, metaCreator) =>{
-    //console.log(type);
+    console.log(type);
     const identity = (...args) => args[0];
     const isFunc = (fn) => typeof(fn) === 'function';
     const isPromise = obj => typeof(obj) === 'object' && isFunc(obj.then);

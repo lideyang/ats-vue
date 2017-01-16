@@ -4,8 +4,8 @@
   "description": "vue vuex ats",
   "main": "index.js",
   "scripts": {
-    "start_dev": "run-p start_dev mock",
-    "start": "webpack-dev-server --inline --hot --host 0.0.0.0 --port 3000 --devtool source-maps --progress --colors --content-base .",
+    "start": "run-p start_dev mock",
+    "start_dev": "webpack-dev-server --inline --hot --host 0.0.0.0 --port 3000 --devtool source-maps --progress --colors --content-base .",
     "build": "cross-env  NODE_ENV=production webpack --progress --colors",
     "mock": "node ./mock-server/server.js 2618"
   },

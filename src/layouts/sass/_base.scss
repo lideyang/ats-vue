@@ -76,7 +76,9 @@ hr {
 .el-form {
     .el-form-item {
         .el-select {
-            width: 150px;
+            .el-input__inner {
+                width: $input-width;
+            }
         }
     }
 }
@@ -89,6 +91,14 @@ hr {
 .el-input__inner {
     padding: 0 10px;
     height: 30px;
+    width: $input-width;
+}
+
+.el-input.input-split {
+    width: 65px;
+    .el-input__inner{
+        width: 65px;
+    }
 }
 
 .el-form-item__content {
@@ -103,9 +113,12 @@ hr {
     padding: 4px 0;
 }
 
+.el-textarea__inner {
+    width: 520px;
+}
+
 //button
 .el-button {
-    padding: 7px 10px;
     vertical-align: middle;
     > span {
         display: inline-block;
@@ -129,9 +142,34 @@ hr {
     }
 }
 
+//dialog
+.el-dialog--large{
+    width: 1000px;
+}
+.el-dialog__header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.el-dialog__body {
+    padding: 20px;
+    .el-form {
+        .el-form-item {
+            margin-bottom: 15px;
+        }
+    }
+}
+.el-dialog__footer{
+    padding:20px 25px;
+    border-top: 1px solid #eee;
+}
 //reset
 .el-button--default, .el-form-item__label {
     color: $gray;
+}
+
+.el-button, .el-radio-button__inner {
+    padding: 7px 10px;
 }
 
 //common
@@ -265,7 +303,7 @@ hr {
                 right: 15px;
             }
         }
-        .el-submenu:last-child{
+        .el-submenu:last-child {
             border-bottom: none;
         }
         .el-menu-item.active, .el-submenu.active {

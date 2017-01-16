@@ -4,10 +4,12 @@
 import {JOBS_LIST} from "../constants/api";
 import Api, {createAction} from "../utils/api";
 
-const metaCreator = ({processIds}) =>({taskIds: processIds.split(',')});
+const metaCreator = ({processIds}) =>({jobsIds: processIds.split(',')});
 
 export default {
-
-    getJobs: createAction(JOBS_LIST, Api.getJobs),
-
+    addJob: createAction('addJob'),
+    showAddJobFrom:createAction('showAddJobFrom'),
+    hideAddJobFrom:createAction('hideAddJobFrom'),
+    getJobsList: createAction(JOBS_LIST, Api.getJobs),
+    allCheckListTrigger: createAction('allCheckListTrigger', event)
 }
