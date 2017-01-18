@@ -80,6 +80,9 @@ hr {
                 width: $input-width;
             }
         }
+        &.select-multiple {
+            height: auto;
+        }
     }
 }
 
@@ -94,10 +97,12 @@ hr {
     width: $input-width;
 }
 
-.el-input.input-split {
-    width: 65px;
-    .el-input__inner{
+.el-input {
+    &.input-split {
         width: 65px;
+        .el-input__inner {
+            width: 65px;
+        }
     }
 }
 
@@ -122,8 +127,9 @@ hr {
     vertical-align: middle;
     > span {
         display: inline-block;
-        i {
+        i.iconfont {
             display: inline-block;
+            margin-right: 5px;
         }
     }
 }
@@ -143,9 +149,10 @@ hr {
 }
 
 //dialog
-.el-dialog--large{
+.el-dialog--large {
     width: 1000px;
 }
+
 .el-dialog__header {
     padding: 20px;
     border-bottom: 1px solid #eee;
@@ -156,13 +163,31 @@ hr {
     .el-form {
         .el-form-item {
             margin-bottom: 15px;
+            &.title {
+                .el-form-item__label {
+                    border-left: 3px solid $brand-primary;
+                    padding: 0px 6px;
+                    margin-left: 12px;
+                    color: $gray-darker;
+                    text-align: left;
+                }
+            }
+            &.describe {
+                height: 60px;
+            }
+            .icon-gantanhao {
+                font-size: $font-size-large;
+                color: $brand-primary;
+            }
         }
     }
 }
-.el-dialog__footer{
-    padding:20px 25px;
+
+.el-dialog__footer {
+    padding: 20px 25px;
     border-top: 1px solid #eee;
 }
+
 //reset
 .el-button--default, .el-form-item__label {
     color: $gray;
@@ -200,8 +225,12 @@ hr {
             }
             .user-menu {
                 float: right;
+                background-color: $brand-primary;
                 .el-menu-item, .el-menu-item.active, .el-submenu__title {
                     color: #fff;
+                    &:hover {
+                        background-color: $brand-primary;
+                    }
                 }
                 .el-menu-item:hover {
                     border-bottom-color: #fff;

@@ -5,7 +5,7 @@
                 <li v-for="item in items">
                     <el-row>
                         <el-col :span="1" class="all-check">
-                            <el-checkbox v-model="allChecked"></el-checkbox>
+                            <el-checkbox v-model="item.checked" name="check"></el-checkbox>
                         </el-col>
                         <el-col :span="19" class="info">
                             <div>
@@ -132,7 +132,7 @@
         },
         data(){
             return {
-                msg: ''
+                checkboxModel: true
             }
         },
         methods: {

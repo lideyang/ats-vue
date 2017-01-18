@@ -103,8 +103,8 @@
     outline: none;
     padding: 0;
     margin: 0;
-    width: 30px;
-    height: 30px;
+    width: 36px;
+    height: 36px;
     cursor: pointer;
     transition: .3s;
     border-radius: 50%;
@@ -156,7 +156,7 @@
 }
 
 .el-carousel__indicators--outside button {
-    background-color: #8492a6;
+    background-color: rgb(131, 145, 165);
     opacity: 0.24;
 }
 

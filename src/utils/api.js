@@ -13,7 +13,7 @@ const METHODS = {
 };
 //异步请求数据
 const request = (url, params, method = METHODS.GET, jsonType = false) =>{
-    console.log(url);
+    console.log(params);
     var options = {
         headers: {
             'Content-Type': jsonType ? 'application/json' : 'application/x-www-form-urlencoded'
@@ -80,27 +80,5 @@ export const createAction = (type, payloadCreator, metaCreator) =>{
 
 export default {
     getJobs: params => request(API.JOBS_LIST, params),
-    // 获取所用的任务列表
-    getTasks: params => request(API.TASK_LIST, params),
-
-    publishTasks: params => post(API.TASKS_PUBLISH, params),
-
-    unPublishTasks: params => post(API.TASKS_UNPUBLISH, params),
-
-
-    // 获取所有的翻译内容审核列表
-    getApprovalList: params => request(API.APPROVAL_List, params),
-
-    acceptApproval: params => post(API.APPROVAL_ACCEPTED, params),
-
-    rejectApproval: params => post(API.APPROVAL_REJECTED, params),
-
-    // 获取翻译的详情
-    getTranslatedArticle: processId => request(API.ARTICLE_VIEW, {processId}),
-
-
-    getUsers: params => request(API.USERS_LIST, params),
-
-    updateUserPwd: params =>post(API.USER_PASSWORD_UPDATED, params)
 };
 

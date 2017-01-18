@@ -95,22 +95,22 @@
     width: 100%
 }
 .el-input.is-disabled .el-input__inner{
-    background-color: #EFF2F7;
-    border-color: #D3DCE6;
+    background-color: rgb(238, 241, 246);
+    border-color: rgb(209, 219, 229);
     color: #bbb;
     cursor: not-allowed
 }
 .el-input.is-disabled .el-input__inner::-webkit-input-placeholder{
-    color: #c0ccda
+    color: rgb(191, 203, 217)
 }
 .el-input.is-disabled .el-input__inner::-moz-placeholder{
-    color: #c0ccda
+    color: rgb(191, 203, 217)
 }
 .el-input.is-disabled .el-input__inner:-ms-input-placeholder{
-    color: #c0ccda
+    color: rgb(191, 203, 217)
 }
 .el-input.is-disabled .el-input__inner::placeholder{
-    color: #c0ccda
+    color: rgb(191, 203, 217)
 }
 .el-input.is-active .el-input__inner{
     outline: none;
@@ -123,12 +123,12 @@
     background-color: #fff;
     background-image: none;
     border-radius: 4px;
-    border: 1px solid #c0ccda;
+    border: 1px solid rgb(191, 203, 217);
     box-sizing: border-box;
-    color: #1f2d3d;
+    color: rgb(31, 45, 61);
     display: block;
     font-size: inherit;
-    height: 30px;
+    height: 36px;
     line-height: 1;
     outline: none;
     padding: 3px 10px;
@@ -136,19 +136,19 @@
     width: 100%
 }
 .el-input__inner::-webkit-input-placeholder{
-    color: #99a9bf
+    color: rgb(151, 168, 190)
 }
 .el-input__inner::-moz-placeholder{
-    color: #99a9bf
+    color: rgb(151, 168, 190)
 }
 .el-input__inner:-ms-input-placeholder{
-    color: #99a9bf
+    color: rgb(151, 168, 190)
 }
 .el-input__inner::placeholder{
-    color: #99a9bf
+    color: rgb(151, 168, 190)
 }
 .el-input__inner:hover{
-    border-color: #8492a6
+    border-color: rgb(131, 145, 165)
 }
 .el-input__inner:focus{
     outline: none;
@@ -161,7 +161,8 @@
     right: 0;
     top: 0;
     text-align: center;
-    color: #c0ccda
+    color: rgb(191, 203, 217);
+    transition: all .3s
 }
 .el-input__icon:after{
     content: '';
@@ -172,6 +173,14 @@
 }
 .el-input__icon + .el-input__inner{
     padding-right: 35px
+}
+.el-input__icon.is-clickable{}
+.el-input__icon.is-clickable:hover{
+    cursor: pointer;
+    color: rgb(131, 145, 165)
+}
+.el-input__icon.is-clickable:hover + .el-input__inner{
+    border-color: rgb(131, 145, 165)
 }
 .el-input--large{
     font-size: 16px
@@ -202,12 +211,12 @@
     display: table-cell
 }
 .el-input-group__append, .el-input-group__prepend{
-    background-color: #f9fafc;
-    color: #99a9bf;
+    background-color: rgb(250, 253, 255);
+    color: rgb(151, 168, 190);
     vertical-align: middle;
     display: table-cell;
     position: relative;
-    border: 1px solid #c0ccda;
+    border: 1px solid rgb(191, 203, 217);
     border-radius: 4px;
     padding: 0 10px;
     width: 1%;
@@ -251,22 +260,22 @@
     vertical-align: bottom
 }
 .el-textarea.is-disabled .el-textarea__inner{
-    background-color: #EFF2F7;
-    border-color: #D3DCE6;
+    background-color: rgb(238, 241, 246);
+    border-color: rgb(209, 219, 229);
     color: #bbb;
     cursor: not-allowed
 }
 .el-textarea.is-disabled .el-textarea__inner::-webkit-input-placeholder{
-    color: #c0ccda
+    color: rgb(191, 203, 217)
 }
 .el-textarea.is-disabled .el-textarea__inner::-moz-placeholder{
-    color: #c0ccda
+    color: rgb(191, 203, 217)
 }
 .el-textarea.is-disabled .el-textarea__inner:-ms-input-placeholder{
-    color: #c0ccda
+    color: rgb(191, 203, 217)
 }
 .el-textarea.is-disabled .el-textarea__inner::placeholder{
-    color: #c0ccda
+    color: rgb(191, 203, 217)
 }
 .el-textarea__inner{
     display: block;
@@ -276,27 +285,27 @@
     box-sizing: border-box;
     width: 100%;
     font-size: 14px;
-    color: #1f2d3d;
+    color: rgb(31, 45, 61);
     background-color: #fff;
     background-image: none;
-    border: 1px solid #c0ccda;
+    border: 1px solid rgb(191, 203, 217);
     border-radius: 4px;
     transition: border-color .2s cubic-bezier(.645,.045,.355,1)
 }
 .el-textarea__inner::-webkit-input-placeholder{
-    color: #99a9bf
+    color: rgb(151, 168, 190)
 }
 .el-textarea__inner::-moz-placeholder{
-    color: #99a9bf
+    color: rgb(151, 168, 190)
 }
 .el-textarea__inner:-ms-input-placeholder{
-    color: #99a9bf
+    color: rgb(151, 168, 190)
 }
 .el-textarea__inner::placeholder{
-    color: #99a9bf
+    color: rgb(151, 168, 190)
 }
 .el-textarea__inner:hover{
-    border-color: #8492a6
+    border-color: rgb(131, 145, 165)
 }
 .el-textarea__inner:focus{
     outline: none;
@@ -402,7 +411,7 @@
     top: 110%;
     margin: 5px 0 0;
     background-color: #fff;
-    border: 1px solid #D3DCE6;
+    border: 1px solid rgb(209, 219, 229);
     width: 100%;
     padding: 6px 0;
     z-index: 10;
@@ -419,7 +428,7 @@
     padding: 0 10px;
     margin: 0;
     cursor: pointer;
-    color: #475669;
+    color: rgb(72, 87, 106);
     font-size: 14px;
     white-space: nowrap;
     overflow: hidden;
@@ -427,7 +436,7 @@
 }
 
 .el-autocomplete__suggestions li:hover{
-    background-color: #e5e9f2
+    background-color: rgb(228, 232, 241)
 }
 
 .el-autocomplete__suggestions li.highlighted{
@@ -441,7 +450,7 @@
 
 .el-autocomplete__suggestions li.divider{
     margin-top: 6px;
-    border-top: 1px solid #D3DCE6
+    border-top: 1px solid rgb(209, 219, 229)
 }
 
 .el-autocomplete__suggestions li.divider:last-child{

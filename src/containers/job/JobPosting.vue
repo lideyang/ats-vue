@@ -6,7 +6,7 @@
                 <el-row>
                     <el-col :span="14">
                         <el-form-item label="职位状态">
-                            <el-select v-model="jobSelectModel" placeholder="请选择职位状态">
+                            <el-select v-model="jobStatusSelectModel" placeholder="请选择职位状态">
                                 <el-option
                                     v-for="item in jobSelectOptions"
                                     :label="item.label"
@@ -15,9 +15,12 @@
                             </el-select>
                         </el-form-item>
                         <el-form-item label="招聘专员">
-                            <el-select placeholder="选择人员">
-                                <el-option label="lidy" value="lidy"></el-option>
-                                <el-option label="lidy2" value="lidy2"></el-option>
+                            <el-select v-model="recruiterSelectModel" placeholder="选择人员">
+                                <el-option
+                                    v-for="item in selectOpt.recruiter"
+                                    :label="item.label"
+                                    :value="item.value">
+                                </el-option>
                             </el-select>
                         </el-form-item>
                         <el-form-item label="职位">
@@ -64,150 +67,7 @@
         <!--搜索列表-->
         <posting-list :items="jobsList.items" :allChecked="jobsList.allChecked"></posting-list>
         <!--发布职位灯箱-->
-        <el-dialog title="发布职位" v-model="addJob.dialogAddJobsVisible" class="dialog-add-job" size="large">
-            <el-form :model="form">
-                <el-row>
-                    <el-col :span="17">
-                        <div class="left">
-                            <el-form-item label="基本信息" :label-width="addJob.formLabelWidth">
-                            </el-form-item>
-                            <el-form-item label="职位名称" :label-width="addJob.formLabelWidth">
-                                <el-input v-model="addJob.addForm.jobName" auto-complete="off"></el-input>
-                            </el-form-item>
-                            <el-form-item label="招聘对象" :label-width="addJob.formLabelWidth">
-                                <el-radio-group v-model="addJob.addForm.obj">
-                                    <el-radio-button label="全职"></el-radio-button>
-                                    <el-radio-button label="兼职"></el-radio-button>
-                                    <el-radio-button label="实习生"></el-radio-button>
-                                </el-radio-group>
-                            </el-form-item>
-                            <el-form-item label="招聘类别" :label-width="addJob.formLabelWidth">
-                                <el-radio-group v-model="addJob.addForm.sort">
-                                    <el-radio-button label="社会招聘"></el-radio-button>
-                                    <el-radio-button label="内部招聘"></el-radio-button>
-                                </el-radio-group>
-                            </el-form-item>
-                            <el-form-item label="职能类别" :label-width="addJob.formLabelWidth">
-                                <el-select placeholder="选择人员">
-                                    <el-option label="研发类" value="lidy"></el-option>
-                                    <el-option label="产品类" value="lidy2"></el-option>
-                                    <el-option label="设计类" value=""></el-option>
-                                </el-select>
-                            </el-form-item>
-                            <el-form-item label="工作地区" :label-width="addJob.formLabelWidth">
-                                <el-select v-model="value7" placeholder="请选择">
-                                    <el-option-group
-                                        v-for="group in addJob.addForm.area"
-                                        :label="group.label">
-                                        <el-option
-                                            v-for="item in group.options"
-                                            :label="item.label"
-                                            :value="item.value">
-                                        </el-option>
-                                    </el-option-group>
-                                </el-select>
-                            </el-form-item>
-                            <el-form-item label="所属行业" :label-width="addJob.formLabelWidth">
-                                <el-select placeholder="选择人员">
-                                    <el-option label="IT/互联网" value="1"></el-option>
-                                    <el-option label="房地产" value="2"></el-option>
-                                    <el-option label="金融" value="3"></el-option>
-                                </el-select>
-                            </el-form-item>
-                            <el-form-item label="职位描述" :label-width="addJob.formLabelWidth">
-                                <el-input
-                                    type="textarea" resize="none"
-                                    :autosize="{ minRows: 2, maxRows: 6}"
-                                    placeholder="请输入职位描述"
-                                    v-model="textarea">
-                                </el-input>
-                            </el-form-item>
-                            <el-form-item label="招聘需求" :label-width="addJob.formLabelWidth">
-                            </el-form-item>
-                            <el-form-item label="招聘人数" :label-width="addJob.formLabelWidth">
-                                <el-input v-model="addJob.addForm.jobNum" auto-complete="off"></el-input>
-                            </el-form-item>
-                            <el-form-item label="提供月薪" :label-width="addJob.formLabelWidth">
-                                <el-input v-model="addJob.addForm.money" auto-complete="off" class="input-split"></el-input>
-                                -
-                                <el-input v-model="addJob.addForm.money" auto-complete="off" class="input-split"></el-input>
-                            </el-form-item>
-                            <el-form-item label="学历" :label-width="addJob.formLabelWidth">
-                                <el-select placeholder="请选择  (选填)">
-                                    <el-option label="研发类" value="lidy"></el-option>
-                                    <el-option label="产品类" value="lidy2"></el-option>
-                                    <el-option label="设计类" value=""></el-option>
-                                </el-select>
-                            </el-form-item>
-                            <el-form-item label="工作年限" :label-width="addJob.formLabelWidth">
-                                <el-select placeholder="请选择  (选填)">
-                                    <el-option label="研发类" value="lidy"></el-option>
-                                    <el-option label="产品类" value="lidy2"></el-option>
-                                    <el-option label="设计类" value=""></el-option>
-                                </el-select>
-                            </el-form-item>
-                        </div>
-                    </el-col>
-                    <el-col :span="7">
-                        <el-form-item label="内部管理" label-width="100px">
-                        </el-form-item>
-                        <el-form-item label="接收简历邮箱" label-width="100px">
-                            <el-select placeholder="选择人员">
-                                <el-option label="研发类" value="lidy"></el-option>
-                                <el-option label="产品类" value="lidy2"></el-option>
-                                <el-option label="设计类" value=""></el-option>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item label="生效日期" label-width="100px">
-                            <el-select placeholder="选择人员">
-                                <el-option label="研发类" value="lidy"></el-option>
-                                <el-option label="产品类" value="lidy2"></el-option>
-                                <el-option label="设计类" value=""></el-option>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item label="期望到岗日期" label-width="100px">
-                            <el-select placeholder="选择人员">
-                                <el-option label="研发类" value="lidy"></el-option>
-                                <el-option label="产品类" value="lidy2"></el-option>
-                                <el-option label="设计类" value=""></el-option>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item label="标记" label-width="100px">
-                            <el-select placeholder="选择人员">
-                                <el-option label="研发类" value="lidy"></el-option>
-                                <el-option label="产品类" value="lidy2"></el-option>
-                                <el-option label="设计类" value=""></el-option>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item label="招聘专员" label-width="100px">
-                            <el-select placeholder="选择人员">
-                                <el-option label="研发类" value="lidy"></el-option>
-                                <el-option label="产品类" value="lidy2"></el-option>
-                                <el-option label="设计类" value=""></el-option>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item label="招聘协同专员" label-width="100px">
-                            <el-select placeholder="选择人员">
-                                <el-option label="研发类" value="lidy"></el-option>
-                                <el-option label="产品类" value="lidy2"></el-option>
-                                <el-option label="设计类" value=""></el-option>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item label="面试评估模板" label-width="100px">
-                            <el-select placeholder="选择人员">
-                                <el-option label="研发类" value="lidy"></el-option>
-                                <el-option label="产品类" value="lidy2"></el-option>
-                                <el-option label="设计类" value=""></el-option>
-                            </el-select>
-                        </el-form-item>
-                    </el-col>
-                </el-row>
-            </el-form>
-            <div slot="footer" class="dialog-footer">
-                <el-button @click="hideAddJobFrom">取 消</el-button>
-                <el-button type="primary" @click="hideAddJobFrom">发 布</el-button>
-            </div>
-        </el-dialog>
+        <add-job-dialog/>
     </div>
 </template>
 
@@ -216,9 +76,10 @@
     import {mapActions, mapState} from 'vuex'
     import {
         Form, FormItem, Select, Option, Input, Row, Col, Checkbox, Button, Dialog, Radio, RadioGroup, RadioButton,
-        OptionGroup
+        OptionGroup, Tooltip
     } from 'element-ui'
     import PostingList from '../../components/job/PostingList'
+    import AddJobDialog from '../../components/job/AddJobDialog'
     Vue.component(Form.name, Form)
     Vue.component(FormItem.name, FormItem)
     Vue.component(Select.name, Select)
@@ -233,11 +94,13 @@
     Vue.component(RadioGroup.name, RadioGroup)
     Vue.component(RadioButton.name, RadioButton)
     Vue.component(OptionGroup.name, OptionGroup)
+    Vue.component(Tooltip.name, Tooltip)
     export default {
 
         name: 'JobPosting',
         components: {
-            PostingList
+            PostingList,
+            AddJobDialog
         },
         data() {
             return {
@@ -257,7 +120,8 @@
                     value: '5',
                     label: '已入职'
                 }],
-                jobSelectModel: []
+                jobStatusSelectModel: '',
+                recruiterSelectModel: ''
             }
         },
         beforeMount(){
@@ -266,18 +130,19 @@
         computed: {
             ...mapState({
                 jobsList: ({jobs}) => jobs.jobsList,
-                addJob: ({jobs})=>jobs.addJob
+                addJob: ({jobs})=>jobs.addJob,
+                selectOpt: ({jobs})=>jobs.selectOpt
             })
         },
         methods: {
             refreshPage(otherParams = {}){
-                otherParams = {...otherParams, ...{status: this.status}};
+                otherParams = {...otherParams, ...{status: '5'}};
                 this.showPageLoading();
                 this.getJobsList(otherParams).then(()=>{
                     this.hidePageLoading();
                 });
             },
-            ...mapActions(["showPageLoading", "hidePageLoading", "getJobsList", 'allCheckListTrigger', 'showAddJobFrom', 'hideAddJobFrom'])
+            ...mapActions(["showPageLoading", "hidePageLoading", "getJobsList", 'allCheckListTrigger', 'showAddJobFrom'])
         },
     };
 </script>

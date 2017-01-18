@@ -108,13 +108,13 @@
     color: #1d9efb;
 }
 .el-date-table td.available:hover {
-    background-color: #e5e9f2;
+    background-color: rgb(228, 232, 241);
 }
 .el-date-table td.in-range {
-    background-color: #D3ECFF;
+    background-color: rgb(210, 236, 254);
 }
 .el-date-table td.in-range:hover {
-    background-color: #AFDCFF;
+    background-color: rgb(174, 220, 254);
 }
 .el-date-table td.current, .el-date-table td.start-date, .el-date-table td.end-date {
     background-color: #1d9efb !important;
@@ -128,19 +128,19 @@
 }
 .el-date-table td.week {
     font-size: 80%;
-    color: #8492a6;
+    color: rgb(131, 145, 165);
 }
 .el-date-table th {
     padding: 5px;
-    color: #8492a6;
+    color: rgb(131, 145, 165);
     font-weight: 400;
 }
 .el-date-table.is-week-mode .el-date-table__row {}
 .el-date-table.is-week-mode .el-date-table__row:hover {
-    background-color: #e5e9f2;
+    background-color: rgb(228, 232, 241);
 }
 .el-date-table.is-week-mode .el-date-table__row.current {
-    background-color: #D3ECFF;
+    background-color: rgb(210, 236, 254);
 }
 :root {
     /* Transition
@@ -245,10 +245,10 @@
     height: 32px;
     display: block;
     line-height: 32px;
-    color: #475669;
+    color: rgb(72, 87, 106);
 }
 .el-month-table td .cell:hover {
-    background-color: #e5e9f2;
+    background-color: rgb(228, 232, 241);
 }
 .el-month-table td.disabled .cell {
     background-color: #f4f4f4;
@@ -353,7 +353,7 @@
     border-collapse: collapse;
 }
 .el-year-table .el-icon {
-    color: #99a9bf;
+    color: rgb(151, 168, 190);
 }
 .el-year-table td {
     text-align: center;
@@ -365,10 +365,10 @@
     height: 32px;
     display: block;
     line-height: 32px;
-    color: #475669;
+    color: rgb(72, 87, 106);
 }
 .el-year-table td .cell:hover {
-    background-color: #e5e9f2;
+    background-color: rgb(228, 232, 241);
 }
 .el-year-table td.disabled .cell {
     background-color: #f4f4f4;
@@ -500,14 +500,14 @@
     font-size: 12px;
 }
 .el-time-spinner__item:hover:not(.disabled):not(.active) {
-    background: #e5e9f2;
+    background: rgb(228, 232, 241);
     cursor: pointer;
 }
 .el-time-spinner__item.active:not(.disabled) {
     color: #fff;
 }
 .el-time-spinner__item.disabled {
-    color: #D3DCE6;
+    color: rgb(209, 219, 229);
     cursor: not-allowed;
 }
 :root {
@@ -927,8 +927,8 @@
   --------------------------*/
 }
 .el-picker-panel {
-    color: #475669;
-    border: 1px solid #D3DCE6;
+    color: rgb(72, 87, 106);
+    border: 1px solid rgb(209, 219, 229);
     box-shadow: 0 2px 6px #ccc;
     background: #fff;
     border-radius: 2px;
@@ -959,14 +959,14 @@
     background-color: transparent;
     line-height: 28px;
     font-size: 14px;
-    color: #475669;
+    color: rgb(72, 87, 106);
     padding-left: 12px;
     text-align: left;
     outline: none;
     cursor: pointer;
 }
 .el-picker-panel__shortcut:hover {
-    background-color: #e5e9f2;
+    background-color: rgb(228, 232, 241);
 }
 .el-picker-panel__shortcut.active {
     background-color: #e6f1fe;
@@ -989,7 +989,7 @@
 }
 .el-picker-panel__icon-btn {
     font-size: 12px;
-    color: #99a9bf;
+    color: rgb(151, 168, 190);
     border: 0;
     background: transparent;
     cursor: pointer;
@@ -1014,7 +1014,7 @@
     border-right: 1px solid #e4e4e4;
     box-sizing: border-box;
     padding-top: 6px;
-    background-color: #f9fafc;
+    background-color: rgb(250, 253, 255);
 }
 .el-picker-panel *[slot=sidebar] + .el-picker-panel__body, .el-picker-panel__sidebar + .el-picker-panel__body {
     margin-left: 110px;
@@ -1244,7 +1244,7 @@
     font-size: 20px;
     vertical-align: middle;
     display: table-cell;
-    color: #99a9bf;
+    color: rgb(151, 168, 190);
 }
 .el-date-range-picker__time-picker-wrap {
     position: relative;
@@ -1369,5 +1369,5 @@
 }
 .el-time-range-picker__body {
     border-radius: 2px;
-    border: 1px solid #D3DCE6;
+    border: 1px solid rgb(209, 219, 229);
 }
