@@ -1,5 +1,5 @@
 <template>
-    <div class="p-layout-topbar">
+    <div class="p-layout-topbar" :style="{zIndex:root.headerDOM.zIndex}">
         <header class="page-header">
             <el-row>
                 <el-col :span="4">
@@ -46,9 +46,11 @@
                             <a href="http://selfhelp.hirede.com/pages/viewpage.action?pageId=819350" target="_blank">帮助</a>
                         </el-menu-item>
                         <el-menu-item index="7">
-                            <a href="http://192.168.1.228:8300/Application/Index" target="_blank">应用市场</a></el-menu-item>
+                            <a href="http://192.168.1.228:8300/Application/Index" target="_blank">应用市场</a>
+                        </el-menu-item>
                         <el-menu-item index="8">
-                            <a href="http://www.hirede.com/SiteHelp/AddNewQuestion" target="_blank">反馈</a></el-menu-item>
+                            <a href="http://www.hirede.com/SiteHelp/AddNewQuestion" target="_blank">反馈</a>
+                        </el-menu-item>
                     </el-menu>
                 </el-col>
             </el-row>
@@ -60,6 +62,7 @@
 </style>
 <script>
     import Vue from 'vue'
+    import {mapState} from 'vuex'
     import {Row, Col, Menu, MenuItem, Submenu, Button, Badge} from 'element-ui'
     Vue.component(Row.name, Row)
     Vue.component(Col.name, Col)
@@ -70,6 +73,11 @@
     Vue.component(Badge.name, Badge)
     export default {
         name: "HeaderNav",
+        computed: {
+            ...mapState({
+                root: ({root}) => root
+            })
+        },
         methods: {
             handleSelect(key, keyPath) {
                 console.log(key, keyPath);

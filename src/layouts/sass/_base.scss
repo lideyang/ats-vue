@@ -164,6 +164,8 @@ hr {
         .el-form-item {
             margin-bottom: 15px;
             &.title {
+                height: 20px;
+                line-height: 20px;
                 .el-form-item__label {
                     border-left: 3px solid $brand-primary;
                     padding: 0px 6px;
@@ -187,7 +189,10 @@ hr {
     padding: 20px 25px;
     border-top: 1px solid #eee;
 }
-
+//pagination
+.el-pagination .el-select .el-input input{
+    width: 110px;
+}
 //reset
 .el-button--default, .el-form-item__label {
     color: $gray;

@@ -68,6 +68,8 @@
         <posting-list :items="jobsList.items" :allChecked="jobsList.allChecked"></posting-list>
         <!--发布职位灯箱-->
         <add-job-dialog/>
+        <!--职位详情灯箱-->
+        <job-info-dialog/>
     </div>
 </template>
 
@@ -80,6 +82,7 @@
     } from 'element-ui'
     import PostingList from '../../components/job/PostingList'
     import AddJobDialog from '../../components/job/AddJobDialog'
+    import JobInfoDialog from '../../components/job/JobInfoDialog'
     Vue.component(Form.name, Form)
     Vue.component(FormItem.name, FormItem)
     Vue.component(Select.name, Select)
@@ -100,7 +103,8 @@
         name: 'JobPosting',
         components: {
             PostingList,
-            AddJobDialog
+            AddJobDialog,
+            JobInfoDialog
         },
         data() {
             return {

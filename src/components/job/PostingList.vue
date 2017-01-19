@@ -9,7 +9,7 @@
                         </el-col>
                         <el-col :span="19" class="info">
                             <div>
-                                <h3 class="inline-block">{{item.Name}}</h3><span class="text-secondary">( 本科    3-5年经验    10k-18k)</span><i class="iconfont icon-zhengyan"></i>
+                                <h3 class="inline-block" @click="showJobInfoFrom">{{item.Name}}</h3><span class="text-secondary">( 本科    3-5年经验    10k-18k)</span><i class="iconfont icon-zhengyan"></i>
                             </div>
                             <p class="msg">
                                 <i class="iconfont icon-home"></i><span>研发部</span>
@@ -142,7 +142,8 @@
             handleCurrentChange(val) {
                 this.currentPage = val;
                 console.log(`当前页: ${val}`);
-            }
+            },
+            ...mapActions(['showJobInfoFrom'])
         },
         components: {}
     }

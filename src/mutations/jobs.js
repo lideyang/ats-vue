@@ -2,7 +2,8 @@
  * Created by Lidy on 2017/1/13.
  */
 import {
-    JOBS_LIST, JOB_ADD, JOB_HIDE_ADD_FROM, JOB_SHOW_ADD_FROM, JOB_ALL_CHECK_TRIGGER, JOB_CHANGE_STATUS
+    JOBS_LIST, JOB_ADD, JOB_HIDE_ADD_FROM, JOB_SHOW_ADD_FROM, JOB_ALL_CHECK_TRIGGER, JOB_CHANGE_STATUS, JOB_INFO_SHOW,
+    JOB_INFO_HIDE
 } from "../constants/api";
 
 const state = {
@@ -24,6 +25,9 @@ const state = {
             money: 0,
             jobStatus: '公开'
         }
+    },
+    jobInfo: {
+        dialogJobInfoVisible: false
     },
     selectOpt: {
         area: [{
@@ -111,7 +115,13 @@ const mutations = {
     },
     [JOB_CHANGE_STATUS](state, {payload}){
         state.addJob.addForm.jobStatus = payload.target.innerText
-    }
+    },
+    [JOB_INFO_SHOW](state){
+        state.jobInfo.dialogJobInfoVisible = true;
+    },
+    [JOB_INFO_HIDE](state){
+        state.jobInfo.dialogJobInfoVisible = false;
+    },
 };
 
 export default{

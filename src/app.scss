@@ -34,17 +34,18 @@
             background: #fff;
             box-shadow: 0 1px 2px 0 #e4e4e4;
             border-radius: 2px;
-            .all-check{
-                .el-checkbox{
+            .all-check {
+                .el-checkbox {
                     padding-top: 35px;
                 }
             }
-            .msg{
+            .msg {
                 margin: 10px 0;
             }
             .info {
                 h3 {
                     display: inline;
+                    cursor: pointer;
                 }
                 span, i {
                     margin: 0 3px;
@@ -68,15 +69,15 @@
                             left: 0;
                             background-color: #fff;
                             padding-right: 10px;
-                            .icon-right{
-                                color:$brand-success;
+                            .icon-right {
+                                color: $brand-success;
                                 font-size: 14px;
                             }
-                            .icon-gantanhao{
-                                color:$brand-danger;
+                            .icon-gantanhao {
+                                color: $brand-danger;
                                 font-size: 14px;
                             }
-                            .text-success{
+                            .text-success, .text-danger {
                                 margin-left: -5px;
                             }
                             i.icon-yuan {
@@ -90,14 +91,14 @@
                     }
                 }
             }
-            .tags{
-                .tag{
+            .tags {
+                .tag {
                     display: inline-block;
                     width: 18px;
                     height: 18px;
                     margin-right: 5px;
-                    border:2px solid $brand-info;
-                    color:$brand-info;
+                    border: 2px solid $brand-info;
+                    color: $brand-info;
                     font-size: $font-size-h6;
                     border-radius: 50%;
                     text-align: center;
@@ -106,15 +107,16 @@
         }
     }
 }
+
 /* 灯箱 */
-.dialog-add-job{
-    .left{
+.dialog-add-job {
+    .left {
         border-right: 1px solid #eee;
         margin-right: 30px;
     }
-    .dialog-footer{
-        .job-status{
-            i.el-icon-*{
+    .dialog-footer {
+        .job-status {
+            i.el-icon- * {
 
             }
         }

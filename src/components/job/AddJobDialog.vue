@@ -122,7 +122,7 @@
                             <i class="iconfont icon-gantanhao"></i>
                         </el-tooltip>
                     </el-form-item>
-                    <el-form-item label="招聘专员" label-width="100px">
+                    <el-form-item class="select-multiple" label="招聘专员" label-width="100px">
                         <el-select v-model="recruiterSelectModel" ref="personSelect" placeholder="选择招聘人员" multiple>
                             <el-option
                                 v-for="item in selectOpt.recruiter"

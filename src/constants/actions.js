@@ -3,4 +3,6 @@ export const HIDE_PAGE_LOADING = 'HIDE_PAGE_LOADING';
 
 export const GET_CURRENT_USER = 'GET_CURRENT_USER';
 
+export const SET_HEADER_Z_INDEX = 'SET_HEADER_Z_INDEX';
+
 
