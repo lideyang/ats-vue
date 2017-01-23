@@ -59,8 +59,27 @@
                 </el-col>
                 <el-col :span="5" class="text-right">
                     <el-button>导出</el-button>
-                    <el-button class="icon"><i class="iconfont icon-liebiao"></i></el-button>
-                    <el-button class="icon"><i class="iconfont icon-wangge"></i></el-button>
+                    <el-button class="icon" :type="jobsList.listView==='list'?'primary':'default'" data-type="list" @click="changeJobListView">
+                        <i class="iconfont icon-liebiao"></i></el-button>
+                    <el-button class="icon" :type="jobsList.listView==='table'?'primary':'default'" data-type="table" @click="changeJobListView">
+                        <i class="iconfont icon-wangge"></i></el-button>
+                    <el-button class="icon" v-if="jobsList.listView==='table'" :type="jobsList.listView==='table'?'primary':'default'" data-type="table" @click="changeJobListView" v-popover:popoverSetting>
+                        <i class="iconfont icon-setting"></i></el-button>
+                    <el-popover
+                        ref="popoverSetting"
+                        placement="right"
+                        width="400"
+                        trigger="click">
+                        <el-table :data="gridData">
+                            <el-checkbox-group v-model="checkList">
+                                <el-checkbox label="复选框 A"></el-checkbox>
+                                <el-checkbox label="复选框 B"></el-checkbox>
+                                <el-checkbox label="复选框 C"></el-checkbox>
+                                <el-checkbox label="禁用" disabled></el-checkbox>
+                                <el-checkbox label="选中且禁用" disabled></el-checkbox>
+                            </el-checkbox-group>
+                        </el-table>
+                    </el-popover>
                 </el-col>
             </el-row>
         </div>
@@ -78,7 +97,7 @@
     import {mapActions, mapState} from 'vuex'
     import {
         Form, FormItem, Select, Option, Input, Row, Col, Checkbox, Button, Dialog, Radio, RadioGroup, RadioButton,
-        OptionGroup, Tooltip
+        OptionGroup, Tooltip, Popover
     } from 'element-ui'
     import PostingList from '../../components/job/PostingList'
     import AddJobDialog from '../../components/job/AddJobDialog'
@@ -98,6 +117,7 @@
     Vue.component(RadioButton.name, RadioButton)
     Vue.component(OptionGroup.name, OptionGroup)
     Vue.component(Tooltip.name, Tooltip)
+    Vue.component(Popover.name, Popover)
     export default {
 
         name: 'JobPosting',
@@ -135,6 +155,7 @@
             ...mapState({
                 jobsList: ({jobs}) => jobs.jobsList,
                 addJob: ({jobs})=>jobs.addJob,
+                jobInfo: ({jobs})=>jobs.jobInfo,
                 selectOpt: ({jobs})=>jobs.selectOpt
             })
         },
@@ -146,7 +167,7 @@
                     this.hidePageLoading();
                 });
             },
-            ...mapActions(["showPageLoading", "hidePageLoading", "getJobsList", 'allCheckListTrigger', 'showAddJobFrom'])
+            ...mapActions(["showPageLoading", "hidePageLoading", "getJobsList", 'allCheckListTrigger', 'showAddJobFrom', 'changeJobListView'])
         },
     };
 </script>

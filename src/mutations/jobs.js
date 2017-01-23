@@ -3,12 +3,60 @@
  */
 import {
     JOBS_LIST, JOB_ADD, JOB_HIDE_ADD_FROM, JOB_SHOW_ADD_FROM, JOB_ALL_CHECK_TRIGGER, JOB_CHANGE_STATUS, JOB_INFO_SHOW,
-    JOB_INFO_HIDE
+    JOB_INFO_HIDE, JOB_CHANGE_LIST_VIEW
 } from "../constants/api";
 
 const state = {
     jobsList: {
         items: [],
+        column: {
+            "Name": {
+                "name": "职位名称",
+                "EN": "Name",
+                "isShow": true
+            },
+            "Code": {
+                "name": "职位编码",
+                "EN": "Code",
+                "isShow": true
+            },
+            "PublishUserName": {
+                "name": "发布者",
+                "EN": "PublishUserName",
+                "isShow": true
+            },
+            "RecruiterName": {
+                "name": "招聘专员",
+                "EN": "RecruiterName",
+                "isShow": true
+            },
+            "ReceiveEmail": {
+                "name": "接收简历邮箱",
+                "EN": "ReceiveEmail",
+                "isShow": true
+            },
+            "DeptName": {
+                "name": "部门",
+                "EN": "DeptName",
+                "isShow": false
+            },
+            "Number": {
+                "name": "需求人数",
+                "EN": "Number",
+                "isShow": true
+            },
+            "StartDate": {
+                "name": "开始时间",
+                "EN": "StartDate",
+                "isShow": true
+            },
+            "EndDate": {
+                "name": "结束时间",
+                "EN": "EndDate",
+                "isShow": true
+            }
+        },
+        listView: 'list',
         allChecked: false,
         pageSize: 10,
         pageNo: 1,
@@ -27,7 +75,8 @@ const state = {
         }
     },
     jobInfo: {
-        dialogJobInfoVisible: false
+        dialogJobInfoVisible: false,
+        data: {}
     },
     selectOpt: {
         area: [{
@@ -94,37 +143,53 @@ const mutations = {
     [JOB_ADD](state){
 
     },
-    [JOB_SHOW_ADD_FROM](state){
+    [JOB_SHOW_ADD_FROM](state, {payload}){
         state.addJob.dialogAddJobsVisible = true;
     },
-    [JOB_HIDE_ADD_FROM](state){
+    [JOB_HIDE_ADD_FROM](state, {payload}){
         state.addJob.dialogAddJobsVisible = false;
     },
     [JOBS_LIST](state, {payload}){
         payload.forEach(function(item){
             item.checked = false;
+            // item.StartDate && eval(item.StartDate)
+            // item.EndDate && eval(item.EndDate)
         })
         state.jobsList.items = payload;
         //state.jobsList.pageNo = payload.pageNo;
     },
     [JOB_ALL_CHECK_TRIGGER] (state, {payload}) {
-        var isChecked = state.jobsList.allChecked = !state.jobsList.allChecked;
+        let isChecked = state.jobsList.allChecked = !state.jobsList.allChecked;
         state.jobsList.items.forEach(function(item){
             item.checked = isChecked;
         })
     },
     [JOB_CHANGE_STATUS](state, {payload}){
-        state.addJob.addForm.jobStatus = payload.target.innerText
+        state.addJob.addForm.jobStatus = payload.currentTarget.innerText
     },
-    [JOB_INFO_SHOW](state){
+    [JOB_INFO_SHOW](state, {payload}){
+        console.log(payload);
+        let data = state.jobsList.items.filter(job=>job.Id === payload);
+        if(data.length){
+            state.jobInfo.data = data[0];
+        }
         state.jobInfo.dialogJobInfoVisible = true;
     },
     [JOB_INFO_HIDE](state){
         state.jobInfo.dialogJobInfoVisible = false;
     },
+    [JOB_CHANGE_LIST_VIEW](state, {payload}){
+        state.jobsList.listView = payload.currentTarget.getAttribute('data-type');
+    }
 };
-
+const getters = {
+    doneJobInfo: (state, jobId) =>{
+        console.log(jobId);
+        return state.jobsList.items.filter(job=>job.Id === jobId)
+    }
+}
 export default{
     state,
-    mutations
+    mutations,
+    getters
 }

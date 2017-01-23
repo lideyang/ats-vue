@@ -3,7 +3,7 @@ var path = require("path"),
     proxy = require("./proxy");
 
 var SRC_PATH = path.join(__dirname, 'src'),
-    DIST_PATH = path.join(__dirname, '../static'),
+    DIST_PATH = path.join(__dirname, './dist'),
     CONTENT_HASH_TAG = '_[contenthash:5]',
     CHUNK_FILE_HASH_TAG = '_[chunkhash:5]';
 
@@ -33,9 +33,8 @@ var config = {
 
     output: {
         path: DIST_PATH,
-        publicPath: '',
-        filename: `js/[name]${CHUNK_FILE_HASH_TAG}.js`,
-        chunkFilename: `js/[id].[name]${CHUNK_FILE_HASH_TAG}.js`
+        publicPath: '/public/dist/',
+        filename: `js/[name].js`
     },
 
     clearBeforeBuild: true,
@@ -47,30 +46,18 @@ var config = {
             '__DEV__': false
         }),
 
-        new WebpackMd5Hash(),
-
         new webpack.optimize.CommonsChunkPlugin(
             'vendors',
-            `js/vendors${CHUNK_FILE_HASH_TAG}.js`,
+            `js/vendors.js`,
             Infinity
         ),
 
-        new ExtractTextPlugin(`css/commons${CONTENT_HASH_TAG}.css`, {allChunks: true}),
+        new ExtractTextPlugin(`css/commons.css`),
 
         new webpack.optimize.UglifyJsPlugin({
             comments: false,
             warnings: false
-        }),
-
-        new HtmlWebpackPlugin({
-            inject: false,
-            filename: '../index.cshtml',
-            template: path.join(SRC_PATH, 'index.jsp'),
-            context: "${request.contextPath}",
-            user: "$!{user.username}",
-            encoding: `<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8" %>`,
-            taglib: `<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>`
-        }),
+        })
     ],
 
     module: {
@@ -86,7 +73,10 @@ var config = {
                 test: /\.vue$/,
                 loader: 'vue'
             },
-
+            {
+                test: /\.css$/,
+                loader: "style!css!autoprefixer"
+            },
             {
                 test: /\.(png|jpg|gif)$/,
                 loader: "url",

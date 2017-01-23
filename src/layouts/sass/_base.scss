@@ -129,7 +129,6 @@ hr {
         display: inline-block;
         i.iconfont {
             display: inline-block;
-            margin-right: 5px;
         }
     }
 }
@@ -143,9 +142,16 @@ hr {
     > span {
         > i {
             font-size: 20px;
-            color: $gray-light;
         }
     }
+}
+
+//table
+.el-table th, .el-table td{
+    height: 50px;
+}
+.el-table tbody .cell {
+    color: $gray;
 }
 
 //dialog
@@ -189,10 +195,12 @@ hr {
     padding: 20px 25px;
     border-top: 1px solid #eee;
 }
+
 //pagination
-.el-pagination .el-select .el-input input{
+.el-pagination .el-select .el-input input {
     width: 110px;
 }
+
 //reset
 .el-button--default, .el-form-item__label {
     color: $gray;
@@ -321,7 +329,7 @@ hr {
         .p-layout-panel {
             left: 180px;
             .p-layout-content {
-                overflow-y: auto;
+                overflow-y: scroll;
             }
         }
     }

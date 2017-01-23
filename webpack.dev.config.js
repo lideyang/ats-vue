@@ -94,11 +94,11 @@ var config = {
 
 			{
 				test: /\.(eot|woff|woff2|ttf|svg)/,
-				loader: "url",
-				query: {
-					limit: 100,
-					name: 'fonts/[name].[ext]'
-				}
+                loader: "url",
+                query: {
+                    limit: 100,
+                    name: 'fonts/[name].[ext]'
+                }
 			}
 		]
 	},

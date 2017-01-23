@@ -1,15 +1,17 @@
 <template>
     <div>
         <div class="jobs-list">
-            <ul>
-                <li v-for="item in items">
+            <!--列表视图-->
+            <ul v-if="jobsList.listView==='list'">
+                <li v-for="item in jobsList.items">
                     <el-row>
                         <el-col :span="1" class="all-check">
                             <el-checkbox v-model="item.checked" name="check"></el-checkbox>
                         </el-col>
                         <el-col :span="19" class="info">
                             <div>
-                                <h3 class="inline-block" @click="showJobInfoFrom">{{item.Name}}</h3><span class="text-secondary">( 本科    3-5年经验    10k-18k)</span><i class="iconfont icon-zhengyan"></i>
+                                <h3 class="inline-block" @click="showJobInfoFrom(item.Id)">{{item.Name}}</h3>
+                                <span class="text-secondary">( 本科    3-5年经验    10k-18k)</span><i class="iconfont icon-zhengyan"></i>
                             </div>
                             <p class="msg">
                                 <i class="iconfont icon-home"></i><span>研发部</span>
@@ -74,6 +76,12 @@
                     </el-row>
                 </li>
             </ul>
+            <!--表格视图-->
+            <el-table v-if="jobsList.listView==='table'" :data="jobsList.items" stripe>
+                <el-table-column type="selection" width="55"></el-table-column>
+                <el-table-column v-for="column in jobsList.column" v-if="column.isShow" :prop="column.EN" :label="column.name">
+                </el-table-column>
+            </el-table>
         </div>
         <!--分页查询-->
         <el-pagination class="text-right"
@@ -93,7 +101,9 @@
 <script>
     import Vue from 'vue'
     import {mapActions, mapState} from 'vuex'
-    import {Form, FormItem, Select, Option, Input, Row, Col, Checkbox, Button, Pagination} from 'element-ui'
+    import {
+        Form, FormItem, Select, Option, Input, Row, Col, Checkbox, Button, Pagination, Table, TableColumn
+    } from 'element-ui'
     Vue.component(Form.name, Form)
     Vue.component(FormItem.name, FormItem)
     Vue.component(Select.name, Select)
@@ -104,6 +114,8 @@
     Vue.component(Checkbox.name, Checkbox)
     Vue.component(Button.name, Button)
     Vue.component(Pagination.name, Pagination)
+    Vue.component(Table.name, Table)
+    Vue.component(TableColumn.name, TableColumn)
     export default{
         name: 'PostingList',
         props: {
@@ -135,13 +147,28 @@
                 checkboxModel: true
             }
         },
+        computed: {
+            ...mapState({
+                jobsList: ({jobs}) => jobs.jobsList,
+                selectOpt: ({jobs})=>jobs.selectOpt
+            })
+        },
         methods: {
+
             handleSizeChange(val) {
                 console.log(`每页 ${val} 条`);
             },
             handleCurrentChange(val) {
                 this.currentPage = val;
                 console.log(`当前页: ${val}`);
+            },
+            doneJobInfo(jobId) {
+                return this.$store.getters.doneJobInfo(jobId)
+            },
+            filterTableView(column){
+                if(column.EN === 'StartDate' || column.EN === 'EndDate'){
+                  return eval(column)
+                }
             },
             ...mapActions(['showJobInfoFrom'])
         },

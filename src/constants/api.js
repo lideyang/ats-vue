@@ -1,6 +1,6 @@
 if(__DEV__){
     window.config && (window.config = {
-        context: 'http://localhost:2618/api',
+        context: 'http://192.168.1.145:2618/api',
         currentUser: 'lidy'
     });
 }
@@ -18,6 +18,7 @@ export const JOB_ALL_CHECK_TRIGGER = 'job/allCheckListTrigger';
 export const JOB_CHANGE_STATUS = 'job/changeStatus';
 export const JOB_INFO_SHOW = 'job/showJobInfo';
 export const JOB_INFO_HIDE = 'job/hideJobInfo';
+export const JOB_CHANGE_LIST_VIEW = 'job/changeJobListView';
 
 
 

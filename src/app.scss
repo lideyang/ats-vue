@@ -27,6 +27,7 @@
 }
 
 .jobs-list {
+    margin-bottom: 20px;
     > ul {
         > li {
             margin-bottom: 15px;
@@ -108,7 +109,7 @@
     }
 }
 
-/* 灯箱 */
+/* 添加职位灯箱 */
 .dialog-add-job {
     .left {
         border-right: 1px solid #eee;
@@ -118,6 +119,35 @@
         .job-status {
             i.el-icon- * {
 
+            }
+        }
+    }
+}
+
+/* 职位详情灯箱 */
+.dialog-info-job {
+    .el-dialog--full {
+        background-color: rgba(255, 255, 255, .5);
+        .el-dialog__header {
+            background-color: $brand-primary;
+            .el-dialog__title, .el-dialog__close {
+                color: #fff;
+            }
+        }
+        .el-dialog__body{
+            width: 1000px;
+            margin: 20px auto;
+            background-color: #fff;
+            .panel.progress{
+                padding-top: 20px;
+                .el-row{
+                    height: 30px;
+                    &:first-child{
+                        .el-button{
+                            margin-top: -7px;
+                        }
+                    }
+                }
             }
         }
     }
