@@ -1,4 +1,4 @@
-/**
+    /**
  * Created by Lidy on 2017/1/13.
  */
 import * as TYPE from "../constants/api";

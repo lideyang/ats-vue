@@ -39,7 +39,7 @@
                         <el-button class="vertical-middle radius" type="primary" icon="plus" @click="showAddJobFrom">
                             发布职位
                         </el-button>
-                        <i class="vertical-middle iconfont icon-gongju"></i>
+                        <a href="/#/Job/ToolBox" target="_self"><i class="vertical-middle iconfont icon-gongju"></i></a>
                     </el-col>
                 </el-row>
             </el-form>

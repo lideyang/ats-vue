@@ -51,7 +51,7 @@
 
 <style lang="sass">
     @import "./layouts/sass/index.scss";
-    @import "./layouts/fonts/iconfont.css";
+    //@import "./layouts/fonts/iconfont.css";
     @import "./app.scss";
 </style>
 

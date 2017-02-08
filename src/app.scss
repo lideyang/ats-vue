@@ -27,6 +27,18 @@
         color: $brand-primary;
         margin-left: 15px;
     }
+    .icon-fanhui {
+        font-size: 18px;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        line-height: 15px;
+        color: #fff;
+        margin-left: 15px;
+        background-color: #059cfe;
+        border-radius: 50%;
+        padding: 5px;
+    }
 }
 
 //筛选条件
@@ -173,6 +185,48 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+
+//工具箱頁面
+.toolBox-list{
+    padding: 65px 0 118px 36px;
+
+    .tool-item{
+        padding:20px;
+        margin:0 40px 20px 0;
+
+        .item{
+            display: flex;
+
+            &:hover{
+                background:#F7F7F7;
+
+                i{
+                    color:#059CFE;
+                }
+            };
+
+            i{
+                display: block;
+                font-size: 80px;
+                color: #CCC;
+                padding: 20px;
+            }
+
+            h3{
+                color: #333;
+                font-weight: 600;
+                font-size: 16px;
+            }
+
+            .tool-text{
+                color: #999;
+                font-size: 14px;
+                line-height: 23px;
             }
         }
     }
