@@ -147,15 +147,18 @@
     Vue.component(TabPane.name, TabPane)
     Vue.component(Progress.name, Progress)
     export default{
+        props: {
+            jobInfo: {
+                type: Object
+            }
+        },
         data() {
             return {
                 activeName: 'first'
             };
         },
         computed: {
-            ...mapState({
-                jobInfo: ({jobs})=>jobs.jobInfo,
-            })
+
         },
         methods: {
             signSelectOnChange(value){

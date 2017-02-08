@@ -6,385 +6,288 @@
             "mock": true,
             "res": {
                 "code": 200,
-                "msg": "Get address successfully.",
-                "data":[
-                    {
-                        "PostedSites": {
-                            "51job.com": {
-                                "Id": 0,
-                                "JobId": 109707,
-                                "Site": "51job.com",
-                                "Result": false,
-                                "FailedReason": null,
-                                "CreatedDate": "\/Date(-62135596800000)\/",
-                                "CreatedBy": null,
-                                "ServicePlan": null,
-                                "PostedLink": null,
-                                "TargetJobId": null,
-                                "LatestRefreshDate": null,
-                                "ExpiredDate": "\/Date(1478620800000)\/",
-                                "EmployerId": 0,
-                                "PostStatus": 0,
-                                "BatchId": null,
-                                "Updated": null,
-                                "UpdatedBy": null
-                            }
+                "msg": "Get API successfully.",
+                "data": {
+                    "Column": [
+                        {
+                            "name": "职位名称",
+                            "EN": "Name",
+                            "isShow": true
                         },
-                        "JobLabelNew": null,
-                        "JobPostSite": null,
-                        "DeptName": "中央研究院",
-                        "PublishUserName": "神农admin",
-                        "RecruiterName": "神农admin",
-                        "JobRecruiters": null,
-                        "Id": 109707,
-                        "Name": "WEB前端开发dsdas",
-                        "Code": "00769",
-                        "InternalCode": "6000",
-                        "EmployerId": 0,
-                        "DeptId": 2308,
-                        "AreaId": 432,
-                        "RecruitAreaId": 0,
-                        "DetailedWorkAddress": "深圳蛇口信息网谷",
-                        "ParentAreaId": 0,
-                        "Number": 2,
-                        "SalaryLower": 0,
-                        "SalaryUpper": 0,
-                        "Description": " 深圳市",
-                        "Hm": 0,
-                        "Recruiter": 745,
-                        "StartDate": "\/Date(-62135596800000)\/",
-                        "EndDate": "\/Date(1482741173000)\/",
-                        "ReceiveEmail": "karlchen8@163.com",
-                        "PostNumber": 0,
-                        "PostDate": "\/Date(1481531573000)\/",
-                        "PostBy": 0,
-                        "Status": 2,
-                        "WillSoonExpire": false,
-                        "CreatedBy": null,
-                        "CreatedDate": null,
-                        "UpdatedBy": null,
-                        "UpdatedDate": "\/Date(1482131539490)\/",
-                        "RequiredAnswer": 0,
-                        "JobFunctions": null,
-                        "JobTypes": null,
-                        "JobRecruitTypes": null,
-                        "JobRecruiters": null,
-                        "ExpiredDays": 14,
-                        "PublicStatus": 1,
-                        "MatchSettingId": null,
-                        "IndustryId": 0,
-                        "JobLabel": "",
-                        "NameWithCode": "WEB前端开发(00769)",
-                        "NameWithCodeAndInternalCode": "WEB前端开发(00769)_6000",
-                        "AutoRecommend": false,
-                        "JobCategory": 723,
-                        "RequireStartDate": "\/Date(1481472000000)\/",
-                        "RequireNumber": 1,
-                        "RequireOnboardDate": "\/Date(1475164800000)\/",
-                        "RequireType": null,
-                        "IncludedPickUpService": false,
-                        "JobGrade": 33995,
-                        "JobRangeFilters": [
-                            {
-                                "JobId": 0,
-                                "Id": 0,
-                                "FilterType": 1,
-                                "MinValue": null,
-                                "MaxValue": null,
-                                "Schema": 0
-                            },
-                            {
-                                "JobId": 0,
-                                "Id": 0,
-                                "FilterType": 4,
-                                "MinValue": null,
-                                "MaxValue": null,
-                                "Schema": 0
-                            },
-                            {
-                                "JobId": 0,
-                                "Id": 0,
-                                "FilterType": 3,
-                                "MinValue": null,
-                                "MaxValue": null,
-                                "Schema": 0
-                            },
-                            {
-                                "JobId": 0,
-                                "Id": 0,
-                                "FilterType": 2,
-                                "MinValue": null,
-                                "MaxValue": null,
-                                "Schema": 0
-                            }
+                        {
+                            "name": "职位编码",
+                            "EN": "Code",
+                            "isShow": true
+                        },
+                        {
+                            "name": "招聘专员",
+                            "EN": "RecruiterName",
+                            "isShow": true
+                        },
+                        {
+                            "name": "发布者",
+                            "EN": "PublishUserName",
+                            "isShow": true
+                        },
+                        {
+                            "name": "接收简历邮箱",
+                            "EN": "ReceiveEmail",
+                            "isShow": true
+                        },
+                        {
+                            "name": "需求人数",
+                            "EN": "Number",
+                            "isShow": true
+                        },
+                        {
+                            "name": "部门",
+                            "EN": "DeptName",
+                            "isShow": false
+                        },
+                        {
+                            "name": "开始时间",
+                            "EN": "StartDate",
+                            "isShow": true
+                        },
+                        {
+                            "name": "结束时间",
+                            "EN": "EndDate",
+                            "isShow": true
+                        },
+                        {
+                            "name": "地区",
+                            "EN": "Description",
+                            "isShow": true
+                        },
+                        {
+                            "name": "工作地址",
+                            "EN": "DetailedWorkAddress",
+                            "isShow": true
+                        }
+                    ],
+                    "AddForm": {
+                        "jobName": "web前端开发ggg",
+                        "obj": [
+                            "兼职"
                         ],
-                        "AgeFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 1,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "DegreeFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 4,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "EnglishLevelFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 3,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "WorkYearFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 2,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "GenderFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 0,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "ApplicationFormSetting": null,
-                        "EvaluationSheetTemplateID": "00000000-0000-0000-0000-000000000000",
-                        "JobLineManagers": [
-                            {
-                                "Id": 122863,
-                                "EmployerId": 10000105,
-                                "JobId": 109707,
-                                "AccountId": 745,
-                                "AccountName": "神农admin",
-                                "CreateDate": "\/Date(-62135596800000)\/"
-                            }
-                        ],
-                        "Images": null
+                        "sort": "社会招聘",
+                        "jobNum": 1,
+                        "money": 0,
+                        "jobArea": "上海",
+                        "jobStatus": "公开"
                     },
-                    {
-                        "PostedSites": {},
-                        "JobLabelNew": null,
-                        "JobPostSite": null,
-                        "DeptName": null,
-                        "PublishUserName": "",
-                        "RecruiterName": "神农admin",
-                        "JobRecruiters": null,
-                        "Id": 107312,
-                        "Name": "web前端开发2",
-                        "Code": "00572",
-                        "InternalCode": "",
-                        "EmployerId": 0,
-                        "DeptId": 745,
-                        "AreaId": 432,
-                        "RecruitAreaId": 0,
-                        "DetailedWorkAddress": "",
-                        "ParentAreaId": 0,
-                        "Number": 0,
-                        "SalaryLower": 0,
-                        "SalaryUpper": 0,
-                        "Description": " 深圳市",
-                        "Hm": 0,
-                        "Recruiter": 745,
-                        "StartDate": "\/Date(-62135596800000)\/",
-                        "EndDate": "\/Date(1615878662000)\/",
-                        "ReceiveEmail": "",
-                        "PostNumber": 0,
-                        "PostDate": "\/Date(1458198662000)\/",
-                        "PostBy": 0,
-                        "Status": 3,
-                        "WillSoonExpire": false,
-                        "CreatedBy": null,
-                        "CreatedDate": null,
-                        "UpdatedBy": null,
-                        "UpdatedDate": "\/Date(1458198662210)\/",
-                        "RequiredAnswer": 0,
-                        "JobFunctions": null,
-                        "JobTypes": null,
-                        "JobRecruitTypes": null,
-                        "JobRecruiters": null,
-                        "ExpiredDays": 1825,
-                        "PublicStatus": 0,
-                        "MatchSettingId": null,
-                        "IndustryId": 0,
-                        "JobLabel": "",
-                        "NameWithCode": "web前端开发(00572)",
-                        "NameWithCodeAndInternalCode": "web前端开发(00572)",
-                        "AutoRecommend": false,
-                        "JobCategory": 0,
-                        "RequireStartDate": null,
-                        "RequireNumber": null,
-                        "RequireOnboardDate": null,
-                        "RequireType": null,
-                        "IncludedPickUpService": false,
-                        "JobGrade": 0,
-                        "JobRangeFilters": [
+                    "SelectOpt": {
+                        "jobStatus": [
                             {
-                                "JobId": 0,
-                                "Id": 0,
-                                "FilterType": 1,
-                                "MinValue": null,
-                                "MaxValue": null,
-                                "Schema": 0
+                                "value": "1",
+                                "label": "发布中"
                             },
                             {
-                                "JobId": 0,
-                                "Id": 0,
-                                "FilterType": 4,
-                                "MinValue": null,
-                                "MaxValue": null,
-                                "Schema": 0
+                                "value": "2",
+                                "label": "已发布"
                             },
                             {
-                                "JobId": 0,
-                                "Id": 0,
-                                "FilterType": 3,
-                                "MinValue": null,
-                                "MaxValue": null,
-                                "Schema": 0
+                                "value": "3",
+                                "label": "已完成"
                             },
                             {
-                                "JobId": 0,
-                                "Id": 0,
-                                "FilterType": 2,
-                                "MinValue": null,
-                                "MaxValue": null,
-                                "Schema": 0
+                                "value": "4",
+                                "label": "未完成"
+                            },
+                            {
+                                "value": "5",
+                                "label": "已入职"
                             }
                         ],
-                        "AgeFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 1,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "DegreeFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 4,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "EnglishLevelFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 3,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "WorkYearFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 2,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "GenderFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 0,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "ApplicationFormSetting": null,
-                        "EvaluationSheetTemplateID": "00000000-0000-0000-0000-000000000000",
-                        "JobLineManagers": [],
-                        "Images": null
+                        "area": [
+                            {
+                                "label": "热门城市",
+                                "options": [
+                                    {
+                                        "value": "Shanghai",
+                                        "label": "上海"
+                                    },
+                                    {
+                                        "value": "Beijing",
+                                        "label": "北京"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "城市名",
+                                "options": [
+                                    {
+                                        "value": "Chengdu",
+                                        "label": "成都"
+                                    },
+                                    {
+                                        "value": "Shenzhen",
+                                        "label": "深圳"
+                                    },
+                                    {
+                                        "value": "Guangzhou",
+                                        "label": "广州"
+                                    },
+                                    {
+                                        "value": "Dalian",
+                                        "label": "大连"
+                                    }
+                                ]
+                            }
+                        ],
+                        "sign": [
+                            {
+                                "value": "1",
+                                "label": "无敌"
+                            },
+                            {
+                                "value": "2",
+                                "label": "寂寞"
+                            },
+                            {
+                                "value": "3",
+                                "label": "巅峰"
+                            },
+                            {
+                                "value": "4",
+                                "label": "空虚"
+                            }
+                        ],
+                        "recruiter": [
+                            {
+                                "value": "1",
+                                "label": "孙大炮"
+                            },
+                            {
+                                "value": "2",
+                                "label": "马家军"
+                            },
+                            {
+                                "value": "3",
+                                "label": "杀马特"
+                            },
+                            {
+                                "value": "4",
+                                "label": "吊炸天"
+                            },
+                            {
+                                "value": "5",
+                                "label": "EXO"
+                            }
+                        ]
                     },
-                    {
-                        "PostedSites": {
-                            "51job.com": {
-                                "Id": 0,
-                                "JobId": 109707,
-                                "Site": "51job.com",
-                                "Result": false,
-                                "FailedReason": null,
-                                "CreatedDate": "\/Date(-62135596800000)\/",
-                                "CreatedBy": null,
-                                "ServicePlan": null,
-                                "PostedLink": null,
-                                "TargetJobId": null,
-                                "LatestRefreshDate": null,
-                                "ExpiredDate": "\/Date(1478620800000)\/",
-                                "EmployerId": 0,
-                                "PostStatus": 0,
-                                "BatchId": null,
-                                "Updated": null,
-                                "UpdatedBy": null
-                            }
-                        },
-                        "JobLabelNew": null,
-                        "JobPostSite": null,
-                        "DeptName": "中央研究院",
-                        "PublishUserName": "神农admin",
-                        "RecruiterName": "神农admin",
-                        "JobRecruiters": null,
-                        "Id": 103707,
-                        "Name": "WEB前端开发33",
-                        "Code": "00769",
-                        "InternalCode": "6000",
-                        "EmployerId": 0,
-                        "DeptId": 2308,
-                        "AreaId": 432,
-                        "RecruitAreaId": 0,
-                        "DetailedWorkAddress": "深圳蛇口信息网谷",
-                        "ParentAreaId": 0,
-                        "Number": 2,
-                        "SalaryLower": 0,
-                        "SalaryUpper": 0,
-                        "Description": " 深圳市",
-                        "Hm": 0,
-                        "Recruiter": 745,
-                        "StartDate": "\/Date(-62135596800000)\/",
-                        "EndDate": "\/Date(1482741173000)\/",
-                        "ReceiveEmail": "karlchen8@163.com",
-                        "PostNumber": 0,
-                        "PostDate": "\/Date(1481531573000)\/",
-                        "PostBy": 0,
-                        "Status": 2,
-                        "WillSoonExpire": false,
-                        "CreatedBy": null,
-                        "CreatedDate": null,
-                        "UpdatedBy": null,
-                        "UpdatedDate": "\/Date(1482131539490)\/",
-                        "RequiredAnswer": 0,
-                        "JobFunctions": null,
-                        "JobTypes": null,
-                        "JobRecruitTypes": null,
-                        "JobRecruiters": null,
-                        "ExpiredDays": 14,
-                        "PublicStatus": 1,
-                        "MatchSettingId": null,
-                        "IndustryId": 0,
-                        "JobLabel": "",
-                        "NameWithCode": "WEB前端开发(00769)",
-                        "NameWithCodeAndInternalCode": "WEB前端开发(00769)_6000",
-                        "AutoRecommend": false,
-                        "JobCategory": 723,
-                        "RequireStartDate": "\/Date(1481472000000)\/",
-                        "RequireNumber": 1,
-                        "RequireOnboardDate": "\/Date(1475164800000)\/",
-                        "RequireType": null,
-                        "IncludedPickUpService": false,
-                        "JobGrade": 33995,
-                        "JobRangeFilters": [
-                            {
+                    "List": [
+                        {
+                            "PostedSites": {
+                                "51job.com": {
+                                    "Id": 0,
+                                    "JobId": 109707,
+                                    "Site": "51job.com",
+                                    "Result": false,
+                                    "FailedReason": null,
+                                    "CreatedDate": "\/Date(-62135596800000)\/",
+                                    "CreatedBy": null,
+                                    "ServicePlan": null,
+                                    "PostedLink": null,
+                                    "TargetJobId": null,
+                                    "LatestRefreshDate": null,
+                                    "ExpiredDate": "\/Date(1478620800000)\/",
+                                    "EmployerId": 0,
+                                    "PostStatus": 0,
+                                    "BatchId": null,
+                                    "Updated": null,
+                                    "UpdatedBy": null
+                                }
+                            },
+                            "JobLabelNew": null,
+                            "JobPostSite": null,
+                            "DeptName": "中央研究院",
+                            "PublishUserName": "神农admin",
+                            "RecruiterName": "神农admin",
+                            "JobRecruiters": null,
+                            "Id": 109707,
+                            "Name": "22WEB前端开发dsdasdasdsadasdasdasdasdas",
+                            "Code": "00769",
+                            "InternalCode": "6000",
+                            "EmployerId": 0,
+                            "DeptId": 2308,
+                            "AreaId": 432,
+                            "RecruitAreaId": 0,
+                            "DetailedWorkAddress": "深圳蛇口信息网谷",
+                            "ParentAreaId": 0,
+                            "Number": 2,
+                            "SalaryLower": 0,
+                            "SalaryUpper": 0,
+                            "Description": " 深圳市",
+                            "Hm": 0,
+                            "Recruiter": 745,
+                            "StartDate": "\/Date(-62135596800000)\/",
+                            "EndDate": "\/Date(1482741173000)\/",
+                            "ReceiveEmail": "karlchen8@163.com",
+                            "PostNumber": 0,
+                            "PostDate": "\/Date(1481531573000)\/",
+                            "PostBy": 0,
+                            "Status": 2,
+                            "WillSoonExpire": false,
+                            "CreatedBy": null,
+                            "CreatedDate": null,
+                            "UpdatedBy": null,
+                            "UpdatedDate": "\/Date(1482131539490)\/",
+                            "RequiredAnswer": 0,
+                            "JobFunctions": null,
+                            "JobTypes": null,
+                            "JobRecruitTypes": null,
+                            "JobRecruiters": null,
+                            "ExpiredDays": 14,
+                            "PublicStatus": 1,
+                            "MatchSettingId": null,
+                            "IndustryId": 0,
+                            "JobLabel": "",
+                            "NameWithCode": "WEB前端开发(00769)",
+                            "NameWithCodeAndInternalCode": "WEB前端开发(00769)_6000",
+                            "AutoRecommend": false,
+                            "JobCategory": 723,
+                            "RequireStartDate": "\/Date(1481472000000)\/",
+                            "RequireNumber": 1,
+                            "RequireOnboardDate": "\/Date(1475164800000)\/",
+                            "RequireType": null,
+                            "IncludedPickUpService": false,
+                            "JobGrade": 33995,
+                            "JobRangeFilters": [
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 1,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 4,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 3,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 2,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                }
+                            ],
+                            "AgeFilter": {
                                 "JobId": 0,
                                 "Id": 0,
                                 "FilterType": 1,
@@ -392,7 +295,7 @@
                                 "MaxValue": null,
                                 "Schema": 0
                             },
-                            {
+                            "DegreeFilter": {
                                 "JobId": 0,
                                 "Id": 0,
                                 "FilterType": 4,
@@ -400,7 +303,7 @@
                                 "MaxValue": null,
                                 "Schema": 0
                             },
-                            {
+                            "EnglishLevelFilter": {
                                 "JobId": 0,
                                 "Id": 0,
                                 "FilterType": 3,
@@ -408,147 +311,127 @@
                                 "MaxValue": null,
                                 "Schema": 0
                             },
-                            {
+                            "WorkYearFilter": {
                                 "JobId": 0,
                                 "Id": 0,
                                 "FilterType": 2,
                                 "MinValue": null,
                                 "MaxValue": null,
                                 "Schema": 0
-                            }
-                        ],
-                        "AgeFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 1,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "DegreeFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 4,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "EnglishLevelFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 3,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "WorkYearFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 2,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "GenderFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 0,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "ApplicationFormSetting": null,
-                        "EvaluationSheetTemplateID": "00000000-0000-0000-0000-000000000000",
-                        "JobLineManagers": [
-                            {
-                                "Id": 122863,
-                                "EmployerId": 10000105,
-                                "JobId": 109707,
-                                "AccountId": 745,
-                                "AccountName": "神农admin",
-                                "CreateDate": "\/Date(-62135596800000)\/"
-                            }
-                        ],
-                        "Images": null
-                    },
-                    {
-                        "PostedSites": {
-                            "51job.com": {
+                            },
+                            "GenderFilter": {
+                                "JobId": 0,
                                 "Id": 0,
-                                "JobId": 109707,
-                                "Site": "51job.com",
-                                "Result": false,
-                                "FailedReason": null,
-                                "CreatedDate": "\/Date(-62135596800000)\/",
-                                "CreatedBy": null,
-                                "ServicePlan": null,
-                                "PostedLink": null,
-                                "TargetJobId": null,
-                                "LatestRefreshDate": null,
-                                "ExpiredDate": "\/Date(1478620800000)\/",
-                                "EmployerId": 0,
-                                "PostStatus": 0,
-                                "BatchId": null,
-                                "Updated": null,
-                                "UpdatedBy": null
-                            }
+                                "FilterType": 0,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "ApplicationFormSetting": null,
+                            "EvaluationSheetTemplateID": "00000000-0000-0000-0000-000000000000",
+                            "JobLineManagers": [
+                                {
+                                    "Id": 122863,
+                                    "EmployerId": 10000105,
+                                    "JobId": 109707,
+                                    "AccountId": 745,
+                                    "AccountName": "神农admin",
+                                    "CreateDate": "\/Date(-62135596800000)\/"
+                                }
+                            ],
+                            "Images": null
                         },
-                        "JobLabelNew": null,
-                        "JobPostSite": null,
-                        "DeptName": "中央研究院",
-                        "PublishUserName": "神农admin",
-                        "RecruiterName": "神农admin",
-                        "JobRecruiters": null,
-                        "Id": 102707,
-                        "Name": "WEB前端开发",
-                        "Code": "00769",
-                        "InternalCode": "6000",
-                        "EmployerId": 0,
-                        "DeptId": 2308,
-                        "AreaId": 432,
-                        "RecruitAreaId": 0,
-                        "DetailedWorkAddress": "深圳蛇口信息网谷",
-                        "ParentAreaId": 0,
-                        "Number": 2,
-                        "SalaryLower": 0,
-                        "SalaryUpper": 0,
-                        "Description": " 深圳市",
-                        "Hm": 0,
-                        "Recruiter": 745,
-                        "StartDate": "\/Date(-62135596800000)\/",
-                        "EndDate": "\/Date(1482741173000)\/",
-                        "ReceiveEmail": "karlchen8@163.com",
-                        "PostNumber": 0,
-                        "PostDate": "\/Date(1481531573000)\/",
-                        "PostBy": 0,
-                        "Status": 2,
-                        "WillSoonExpire": false,
-                        "CreatedBy": null,
-                        "CreatedDate": null,
-                        "UpdatedBy": null,
-                        "UpdatedDate": "\/Date(1482131539490)\/",
-                        "RequiredAnswer": 0,
-                        "JobFunctions": null,
-                        "JobTypes": null,
-                        "JobRecruitTypes": null,
-                        "JobRecruiters": null,
-                        "ExpiredDays": 14,
-                        "PublicStatus": 1,
-                        "MatchSettingId": null,
-                        "IndustryId": 0,
-                        "JobLabel": "",
-                        "NameWithCode": "WEB前端开发(00769)",
-                        "NameWithCodeAndInternalCode": "WEB前端开发(00769)_6000",
-                        "AutoRecommend": false,
-                        "JobCategory": 723,
-                        "RequireStartDate": "\/Date(1481472000000)\/",
-                        "RequireNumber": 1,
-                        "RequireOnboardDate": "\/Date(1475164800000)\/",
-                        "RequireType": null,
-                        "IncludedPickUpService": false,
-                        "JobGrade": 33995,
-                        "JobRangeFilters": [
-                            {
+                        {
+                            "PostedSites": {},
+                            "JobLabelNew": null,
+                            "JobPostSite": null,
+                            "DeptName": null,
+                            "PublishUserName": "",
+                            "RecruiterName": "神农admin",
+                            "JobRecruiters": null,
+                            "Id": 107312,
+                            "Name": "web前端开发2",
+                            "Code": "00572",
+                            "InternalCode": "",
+                            "EmployerId": 0,
+                            "DeptId": 745,
+                            "AreaId": 432,
+                            "RecruitAreaId": 0,
+                            "DetailedWorkAddress": "",
+                            "ParentAreaId": 0,
+                            "Number": 0,
+                            "SalaryLower": 0,
+                            "SalaryUpper": 0,
+                            "Description": " 深圳市",
+                            "Hm": 0,
+                            "Recruiter": 745,
+                            "StartDate": "\/Date(-62135596800000)\/",
+                            "EndDate": "\/Date(1615878662000)\/",
+                            "ReceiveEmail": "",
+                            "PostNumber": 0,
+                            "PostDate": "\/Date(1458198662000)\/",
+                            "PostBy": 0,
+                            "Status": 3,
+                            "WillSoonExpire": false,
+                            "CreatedBy": null,
+                            "CreatedDate": null,
+                            "UpdatedBy": null,
+                            "UpdatedDate": "\/Date(1458198662210)\/",
+                            "RequiredAnswer": 0,
+                            "JobFunctions": null,
+                            "JobTypes": null,
+                            "JobRecruitTypes": null,
+                            "JobRecruiters": null,
+                            "ExpiredDays": 1825,
+                            "PublicStatus": 0,
+                            "MatchSettingId": null,
+                            "IndustryId": 0,
+                            "JobLabel": "",
+                            "NameWithCode": "web前端开发(00572)",
+                            "NameWithCodeAndInternalCode": "web前端开发(00572)",
+                            "AutoRecommend": false,
+                            "JobCategory": 0,
+                            "RequireStartDate": null,
+                            "RequireNumber": null,
+                            "RequireOnboardDate": null,
+                            "RequireType": null,
+                            "IncludedPickUpService": false,
+                            "JobGrade": 0,
+                            "JobRangeFilters": [
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 1,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 4,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 3,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 2,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                }
+                            ],
+                            "AgeFilter": {
                                 "JobId": 0,
                                 "Id": 0,
                                 "FilterType": 1,
@@ -556,7 +439,7 @@
                                 "MaxValue": null,
                                 "Schema": 0
                             },
-                            {
+                            "DegreeFilter": {
                                 "JobId": 0,
                                 "Id": 0,
                                 "FilterType": 4,
@@ -564,7 +447,7 @@
                                 "MaxValue": null,
                                 "Schema": 0
                             },
-                            {
+                            "EnglishLevelFilter": {
                                 "JobId": 0,
                                 "Id": 0,
                                 "FilterType": 3,
@@ -572,147 +455,138 @@
                                 "MaxValue": null,
                                 "Schema": 0
                             },
-                            {
+                            "WorkYearFilter": {
                                 "JobId": 0,
                                 "Id": 0,
                                 "FilterType": 2,
                                 "MinValue": null,
                                 "MaxValue": null,
                                 "Schema": 0
-                            }
-                        ],
-                        "AgeFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 1,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "DegreeFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 4,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "EnglishLevelFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 3,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "WorkYearFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 2,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "GenderFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 0,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
-                        },
-                        "ApplicationFormSetting": null,
-                        "EvaluationSheetTemplateID": "00000000-0000-0000-0000-000000000000",
-                        "JobLineManagers": [
-                            {
-                                "Id": 122863,
-                                "EmployerId": 10000105,
-                                "JobId": 109707,
-                                "AccountId": 745,
-                                "AccountName": "神农admin",
-                                "CreateDate": "\/Date(-62135596800000)\/"
-                            }
-                        ],
-                        "Images": null
-                    },
-                    {
-                        "PostedSites": {
-                            "51job.com": {
+                            },
+                            "GenderFilter": {
+                                "JobId": 0,
                                 "Id": 0,
-                                "JobId": 109707,
-                                "Site": "51job.com",
-                                "Result": false,
-                                "FailedReason": null,
-                                "CreatedDate": "\/Date(-62135596800000)\/",
-                                "CreatedBy": null,
-                                "ServicePlan": null,
-                                "PostedLink": null,
-                                "TargetJobId": null,
-                                "LatestRefreshDate": null,
-                                "ExpiredDate": "\/Date(1478620800000)\/",
-                                "EmployerId": 0,
-                                "PostStatus": 0,
-                                "BatchId": null,
-                                "Updated": null,
-                                "UpdatedBy": null
-                            }
+                                "FilterType": 0,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "ApplicationFormSetting": null,
+                            "EvaluationSheetTemplateID": "00000000-0000-0000-0000-000000000000",
+                            "JobLineManagers": [],
+                            "Images": null
                         },
-                        "JobLabelNew": null,
-                        "JobPostSite": null,
-                        "DeptName": "中央研究院",
-                        "PublishUserName": "神农admin",
-                        "RecruiterName": "神农admin",
-                        "JobRecruiters": null,
-                        "Id": 101707,
-                        "Name": "WEB前端开发",
-                        "Code": "00769",
-                        "InternalCode": "6000",
-                        "EmployerId": 0,
-                        "DeptId": 2308,
-                        "AreaId": 432,
-                        "RecruitAreaId": 0,
-                        "DetailedWorkAddress": "深圳蛇口信息网谷",
-                        "ParentAreaId": 0,
-                        "Number": 2,
-                        "SalaryLower": 0,
-                        "SalaryUpper": 0,
-                        "Description": " 深圳市",
-                        "Hm": 0,
-                        "Recruiter": 745,
-                        "StartDate": "\/Date(-62135596800000)\/",
-                        "EndDate": "\/Date(1482741173000)\/",
-                        "ReceiveEmail": "karlchen8@163.com",
-                        "PostNumber": 0,
-                        "PostDate": "\/Date(1481531573000)\/",
-                        "PostBy": 0,
-                        "Status": 2,
-                        "WillSoonExpire": false,
-                        "CreatedBy": null,
-                        "CreatedDate": null,
-                        "UpdatedBy": null,
-                        "UpdatedDate": "\/Date(1482131539490)\/",
-                        "RequiredAnswer": 0,
-                        "JobFunctions": null,
-                        "JobTypes": null,
-                        "JobRecruitTypes": null,
-                        "JobRecruiters": null,
-                        "ExpiredDays": 14,
-                        "PublicStatus": 1,
-                        "MatchSettingId": null,
-                        "IndustryId": 0,
-                        "JobLabel": "",
-                        "NameWithCode": "WEB前端开发(00769)",
-                        "NameWithCodeAndInternalCode": "WEB前端开发(00769)_6000",
-                        "AutoRecommend": false,
-                        "JobCategory": 723,
-                        "RequireStartDate": "\/Date(1481472000000)\/",
-                        "RequireNumber": 1,
-                        "RequireOnboardDate": "\/Date(1475164800000)\/",
-                        "RequireType": null,
-                        "IncludedPickUpService": false,
-                        "JobGrade": 33995,
-                        "JobRangeFilters": [
-                            {
+                        {
+                            "PostedSites": {
+                                "51job.com": {
+                                    "Id": 0,
+                                    "JobId": 109707,
+                                    "Site": "51job.com",
+                                    "Result": false,
+                                    "FailedReason": null,
+                                    "CreatedDate": "\/Date(-62135596800000)\/",
+                                    "CreatedBy": null,
+                                    "ServicePlan": null,
+                                    "PostedLink": null,
+                                    "TargetJobId": null,
+                                    "LatestRefreshDate": null,
+                                    "ExpiredDate": "\/Date(1478620800000)\/",
+                                    "EmployerId": 0,
+                                    "PostStatus": 0,
+                                    "BatchId": null,
+                                    "Updated": null,
+                                    "UpdatedBy": null
+                                }
+                            },
+                            "JobLabelNew": null,
+                            "JobPostSite": null,
+                            "DeptName": "中央研究院",
+                            "PublishUserName": "神农admin",
+                            "RecruiterName": "神农admin",
+                            "JobRecruiters": null,
+                            "Id": 103707,
+                            "Name": "WEB前端开发33",
+                            "Code": "00769",
+                            "InternalCode": "6000",
+                            "EmployerId": 0,
+                            "DeptId": 2308,
+                            "AreaId": 432,
+                            "RecruitAreaId": 0,
+                            "DetailedWorkAddress": "深圳蛇口信息网谷",
+                            "ParentAreaId": 0,
+                            "Number": 2,
+                            "SalaryLower": 0,
+                            "SalaryUpper": 0,
+                            "Description": " 深圳市",
+                            "Hm": 0,
+                            "Recruiter": 745,
+                            "StartDate": "\/Date(-62135596800000)\/",
+                            "EndDate": "\/Date(1482741173000)\/",
+                            "ReceiveEmail": "karlchen8@163.com",
+                            "PostNumber": 0,
+                            "PostDate": "\/Date(1481531573000)\/",
+                            "PostBy": 0,
+                            "Status": 2,
+                            "WillSoonExpire": false,
+                            "CreatedBy": null,
+                            "CreatedDate": null,
+                            "UpdatedBy": null,
+                            "UpdatedDate": "\/Date(1482131539490)\/",
+                            "RequiredAnswer": 0,
+                            "JobFunctions": null,
+                            "JobTypes": null,
+                            "JobRecruitTypes": null,
+                            "JobRecruiters": null,
+                            "ExpiredDays": 14,
+                            "PublicStatus": 1,
+                            "MatchSettingId": null,
+                            "IndustryId": 0,
+                            "JobLabel": "",
+                            "NameWithCode": "WEB前端开发(00769)",
+                            "NameWithCodeAndInternalCode": "WEB前端开发(00769)_6000",
+                            "AutoRecommend": false,
+                            "JobCategory": 723,
+                            "RequireStartDate": "\/Date(1481472000000)\/",
+                            "RequireNumber": 1,
+                            "RequireOnboardDate": "\/Date(1475164800000)\/",
+                            "RequireType": null,
+                            "IncludedPickUpService": false,
+                            "JobGrade": 33995,
+                            "JobRangeFilters": [
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 1,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 4,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 3,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 2,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                }
+                            ],
+                            "AgeFilter": {
                                 "JobId": 0,
                                 "Id": 0,
                                 "FilterType": 1,
@@ -720,7 +594,7 @@
                                 "MaxValue": null,
                                 "Schema": 0
                             },
-                            {
+                            "DegreeFilter": {
                                 "JobId": 0,
                                 "Id": 0,
                                 "FilterType": 4,
@@ -728,7 +602,7 @@
                                 "MaxValue": null,
                                 "Schema": 0
                             },
-                            {
+                            "EnglishLevelFilter": {
                                 "JobId": 0,
                                 "Id": 0,
                                 "FilterType": 3,
@@ -736,70 +610,1186 @@
                                 "MaxValue": null,
                                 "Schema": 0
                             },
-                            {
+                            "WorkYearFilter": {
                                 "JobId": 0,
                                 "Id": 0,
                                 "FilterType": 2,
                                 "MinValue": null,
                                 "MaxValue": null,
                                 "Schema": 0
-                            }
-                        ],
-                        "AgeFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 1,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
+                            },
+                            "GenderFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 0,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "ApplicationFormSetting": null,
+                            "EvaluationSheetTemplateID": "00000000-0000-0000-0000-000000000000",
+                            "JobLineManagers": [
+                                {
+                                    "Id": 122863,
+                                    "EmployerId": 10000105,
+                                    "JobId": 109707,
+                                    "AccountId": 745,
+                                    "AccountName": "神农admin",
+                                    "CreateDate": "\/Date(-62135596800000)\/"
+                                }
+                            ],
+                            "Images": null
                         },
-                        "DegreeFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 4,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
+                        {
+                            "PostedSites": {
+                                "51job.com": {
+                                    "Id": 0,
+                                    "JobId": 109707,
+                                    "Site": "51job.com",
+                                    "Result": false,
+                                    "FailedReason": null,
+                                    "CreatedDate": "\/Date(-62135596800000)\/",
+                                    "CreatedBy": null,
+                                    "ServicePlan": null,
+                                    "PostedLink": null,
+                                    "TargetJobId": null,
+                                    "LatestRefreshDate": null,
+                                    "ExpiredDate": "\/Date(1478620800000)\/",
+                                    "EmployerId": 0,
+                                    "PostStatus": 0,
+                                    "BatchId": null,
+                                    "Updated": null,
+                                    "UpdatedBy": null
+                                }
+                            },
+                            "JobLabelNew": null,
+                            "JobPostSite": null,
+                            "DeptName": "中央研究院",
+                            "PublishUserName": "神农admin",
+                            "RecruiterName": "神农admin",
+                            "JobRecruiters": null,
+                            "Id": 102707,
+                            "Name": "WEB前端开发",
+                            "Code": "00769",
+                            "InternalCode": "6000",
+                            "EmployerId": 0,
+                            "DeptId": 2308,
+                            "AreaId": 432,
+                            "RecruitAreaId": 0,
+                            "DetailedWorkAddress": "深圳蛇口信息网谷",
+                            "ParentAreaId": 0,
+                            "Number": 2,
+                            "SalaryLower": 0,
+                            "SalaryUpper": 0,
+                            "Description": " 深圳市",
+                            "Hm": 0,
+                            "Recruiter": 745,
+                            "StartDate": "\/Date(-62135596800000)\/",
+                            "EndDate": "\/Date(1482741173000)\/",
+                            "ReceiveEmail": "karlchen8@163.com",
+                            "PostNumber": 0,
+                            "PostDate": "\/Date(1481531573000)\/",
+                            "PostBy": 0,
+                            "Status": 2,
+                            "WillSoonExpire": false,
+                            "CreatedBy": null,
+                            "CreatedDate": null,
+                            "UpdatedBy": null,
+                            "UpdatedDate": "\/Date(1482131539490)\/",
+                            "RequiredAnswer": 0,
+                            "JobFunctions": null,
+                            "JobTypes": null,
+                            "JobRecruitTypes": null,
+                            "JobRecruiters": null,
+                            "ExpiredDays": 14,
+                            "PublicStatus": 1,
+                            "MatchSettingId": null,
+                            "IndustryId": 0,
+                            "JobLabel": "",
+                            "NameWithCode": "WEB前端开发(00769)",
+                            "NameWithCodeAndInternalCode": "WEB前端开发(00769)_6000",
+                            "AutoRecommend": false,
+                            "JobCategory": 723,
+                            "RequireStartDate": "\/Date(1481472000000)\/",
+                            "RequireNumber": 1,
+                            "RequireOnboardDate": "\/Date(1475164800000)\/",
+                            "RequireType": null,
+                            "IncludedPickUpService": false,
+                            "JobGrade": 33995,
+                            "JobRangeFilters": [
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 1,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 4,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 3,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 2,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                }
+                            ],
+                            "AgeFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 1,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "DegreeFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 4,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "EnglishLevelFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 3,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "WorkYearFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 2,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "GenderFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 0,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "ApplicationFormSetting": null,
+                            "EvaluationSheetTemplateID": "00000000-0000-0000-0000-000000000000",
+                            "JobLineManagers": [
+                                {
+                                    "Id": 122863,
+                                    "EmployerId": 10000105,
+                                    "JobId": 109707,
+                                    "AccountId": 745,
+                                    "AccountName": "神农admin",
+                                    "CreateDate": "\/Date(-62135596800000)\/"
+                                }
+                            ],
+                            "Images": null
                         },
-                        "EnglishLevelFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 3,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
+                        {
+                            "PostedSites": {
+                                "51job.com": {
+                                    "Id": 0,
+                                    "JobId": 109707,
+                                    "Site": "51job.com",
+                                    "Result": false,
+                                    "FailedReason": null,
+                                    "CreatedDate": "\/Date(-62135596800000)\/",
+                                    "CreatedBy": null,
+                                    "ServicePlan": null,
+                                    "PostedLink": null,
+                                    "TargetJobId": null,
+                                    "LatestRefreshDate": null,
+                                    "ExpiredDate": "\/Date(1478620800000)\/",
+                                    "EmployerId": 0,
+                                    "PostStatus": 0,
+                                    "BatchId": null,
+                                    "Updated": null,
+                                    "UpdatedBy": null
+                                }
+                            },
+                            "JobLabelNew": null,
+                            "JobPostSite": null,
+                            "DeptName": "中央研究院",
+                            "PublishUserName": "神农admin",
+                            "RecruiterName": "神农admin",
+                            "JobRecruiters": null,
+                            "Id": 101707,
+                            "Name": "WEB前端开发",
+                            "Code": "00769",
+                            "InternalCode": "6000",
+                            "EmployerId": 0,
+                            "DeptId": 2308,
+                            "AreaId": 432,
+                            "RecruitAreaId": 0,
+                            "DetailedWorkAddress": "深圳蛇口信息网谷",
+                            "ParentAreaId": 0,
+                            "Number": 2,
+                            "SalaryLower": 0,
+                            "SalaryUpper": 0,
+                            "Description": " 深圳市",
+                            "Hm": 0,
+                            "Recruiter": 745,
+                            "StartDate": "\/Date(-62135596800000)\/",
+                            "EndDate": "\/Date(1482741173000)\/",
+                            "ReceiveEmail": "karlchen8@163.com",
+                            "PostNumber": 0,
+                            "PostDate": "\/Date(1481531573000)\/",
+                            "PostBy": 0,
+                            "Status": 2,
+                            "WillSoonExpire": false,
+                            "CreatedBy": null,
+                            "CreatedDate": null,
+                            "UpdatedBy": null,
+                            "UpdatedDate": "\/Date(1482131539490)\/",
+                            "RequiredAnswer": 0,
+                            "JobFunctions": null,
+                            "JobTypes": null,
+                            "JobRecruitTypes": null,
+                            "JobRecruiters": null,
+                            "ExpiredDays": 14,
+                            "PublicStatus": 1,
+                            "MatchSettingId": null,
+                            "IndustryId": 0,
+                            "JobLabel": "",
+                            "NameWithCode": "WEB前端开发(00769)",
+                            "NameWithCodeAndInternalCode": "WEB前端开发(00769)_6000",
+                            "AutoRecommend": false,
+                            "JobCategory": 723,
+                            "RequireStartDate": "\/Date(1481472000000)\/",
+                            "RequireNumber": 1,
+                            "RequireOnboardDate": "\/Date(1475164800000)\/",
+                            "RequireType": null,
+                            "IncludedPickUpService": false,
+                            "JobGrade": 33995,
+                            "JobRangeFilters": [
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 1,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 4,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 3,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 2,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                }
+                            ],
+                            "AgeFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 1,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "DegreeFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 4,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "EnglishLevelFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 3,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "WorkYearFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 2,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "GenderFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 0,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "ApplicationFormSetting": null,
+                            "EvaluationSheetTemplateID": "00000000-0000-0000-0000-000000000000",
+                            "JobLineManagers": [
+                                {
+                                    "Id": 122863,
+                                    "EmployerId": 10000105,
+                                    "JobId": 109707,
+                                    "AccountId": 745,
+                                    "AccountName": "神农admin",
+                                    "CreateDate": "\/Date(-62135596800000)\/"
+                                }
+                            ],
+                            "Images": null
                         },
-                        "WorkYearFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 2,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
+                        {
+                            "PostedSites": {
+                                "51job.com": {
+                                    "Id": 0,
+                                    "JobId": 109707,
+                                    "Site": "51job.com",
+                                    "Result": false,
+                                    "FailedReason": null,
+                                    "CreatedDate": "\/Date(-62135596800000)\/",
+                                    "CreatedBy": null,
+                                    "ServicePlan": null,
+                                    "PostedLink": null,
+                                    "TargetJobId": null,
+                                    "LatestRefreshDate": null,
+                                    "ExpiredDate": "\/Date(1478620800000)\/",
+                                    "EmployerId": 0,
+                                    "PostStatus": 0,
+                                    "BatchId": null,
+                                    "Updated": null,
+                                    "UpdatedBy": null
+                                }
+                            },
+                            "JobLabelNew": null,
+                            "JobPostSite": null,
+                            "DeptName": "中央研究院",
+                            "PublishUserName": "神农admin",
+                            "RecruiterName": "神农admin",
+                            "JobRecruiters": null,
+                            "Id": 109707,
+                            "Name": "WEB前端开发dsdasdasdsadasdasdasdasdas",
+                            "Code": "00769",
+                            "InternalCode": "6000",
+                            "EmployerId": 0,
+                            "DeptId": 2308,
+                            "AreaId": 432,
+                            "RecruitAreaId": 0,
+                            "DetailedWorkAddress": "深圳蛇口信息网谷",
+                            "ParentAreaId": 0,
+                            "Number": 2,
+                            "SalaryLower": 0,
+                            "SalaryUpper": 0,
+                            "Description": " 深圳市",
+                            "Hm": 0,
+                            "Recruiter": 745,
+                            "StartDate": "\/Date(-62135596800000)\/",
+                            "EndDate": "\/Date(1482741173000)\/",
+                            "ReceiveEmail": "karlchen8@163.com",
+                            "PostNumber": 0,
+                            "PostDate": "\/Date(1481531573000)\/",
+                            "PostBy": 0,
+                            "Status": 2,
+                            "WillSoonExpire": false,
+                            "CreatedBy": null,
+                            "CreatedDate": null,
+                            "UpdatedBy": null,
+                            "UpdatedDate": "\/Date(1482131539490)\/",
+                            "RequiredAnswer": 0,
+                            "JobFunctions": null,
+                            "JobTypes": null,
+                            "JobRecruitTypes": null,
+                            "JobRecruiters": null,
+                            "ExpiredDays": 14,
+                            "PublicStatus": 1,
+                            "MatchSettingId": null,
+                            "IndustryId": 0,
+                            "JobLabel": "",
+                            "NameWithCode": "WEB前端开发(00769)",
+                            "NameWithCodeAndInternalCode": "WEB前端开发(00769)_6000",
+                            "AutoRecommend": false,
+                            "JobCategory": 723,
+                            "RequireStartDate": "\/Date(1481472000000)\/",
+                            "RequireNumber": 1,
+                            "RequireOnboardDate": "\/Date(1475164800000)\/",
+                            "RequireType": null,
+                            "IncludedPickUpService": false,
+                            "JobGrade": 33995,
+                            "JobRangeFilters": [
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 1,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 4,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 3,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 2,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                }
+                            ],
+                            "AgeFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 1,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "DegreeFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 4,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "EnglishLevelFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 3,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "WorkYearFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 2,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "GenderFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 0,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "ApplicationFormSetting": null,
+                            "EvaluationSheetTemplateID": "00000000-0000-0000-0000-000000000000",
+                            "JobLineManagers": [
+                                {
+                                    "Id": 122863,
+                                    "EmployerId": 10000105,
+                                    "JobId": 109707,
+                                    "AccountId": 745,
+                                    "AccountName": "神农admin",
+                                    "CreateDate": "\/Date(-62135596800000)\/"
+                                }
+                            ],
+                            "Images": null
                         },
-                        "GenderFilter": {
-                            "JobId": 0,
-                            "Id": 0,
-                            "FilterType": 0,
-                            "MinValue": null,
-                            "MaxValue": null,
-                            "Schema": 0
+                        {
+                            "PostedSites": {
+                                "51job.com": {
+                                    "Id": 0,
+                                    "JobId": 109707,
+                                    "Site": "51job.com",
+                                    "Result": false,
+                                    "FailedReason": null,
+                                    "CreatedDate": "\/Date(-62135596800000)\/",
+                                    "CreatedBy": null,
+                                    "ServicePlan": null,
+                                    "PostedLink": null,
+                                    "TargetJobId": null,
+                                    "LatestRefreshDate": null,
+                                    "ExpiredDate": "\/Date(1478620800000)\/",
+                                    "EmployerId": 0,
+                                    "PostStatus": 0,
+                                    "BatchId": null,
+                                    "Updated": null,
+                                    "UpdatedBy": null
+                                }
+                            },
+                            "JobLabelNew": null,
+                            "JobPostSite": null,
+                            "DeptName": "中央研究院",
+                            "PublishUserName": "神农admin",
+                            "RecruiterName": "神农admin",
+                            "JobRecruiters": null,
+                            "Id": 109707,
+                            "Name": "WEB前端开发dsdasdasdsadasdasdasdasdas",
+                            "Code": "00769",
+                            "InternalCode": "6000",
+                            "EmployerId": 0,
+                            "DeptId": 2308,
+                            "AreaId": 432,
+                            "RecruitAreaId": 0,
+                            "DetailedWorkAddress": "深圳蛇口信息网谷",
+                            "ParentAreaId": 0,
+                            "Number": 2,
+                            "SalaryLower": 0,
+                            "SalaryUpper": 0,
+                            "Description": " 深圳市",
+                            "Hm": 0,
+                            "Recruiter": 745,
+                            "StartDate": "\/Date(-62135596800000)\/",
+                            "EndDate": "\/Date(1482741173000)\/",
+                            "ReceiveEmail": "karlchen8@163.com",
+                            "PostNumber": 0,
+                            "PostDate": "\/Date(1481531573000)\/",
+                            "PostBy": 0,
+                            "Status": 2,
+                            "WillSoonExpire": false,
+                            "CreatedBy": null,
+                            "CreatedDate": null,
+                            "UpdatedBy": null,
+                            "UpdatedDate": "\/Date(1482131539490)\/",
+                            "RequiredAnswer": 0,
+                            "JobFunctions": null,
+                            "JobTypes": null,
+                            "JobRecruitTypes": null,
+                            "JobRecruiters": null,
+                            "ExpiredDays": 14,
+                            "PublicStatus": 1,
+                            "MatchSettingId": null,
+                            "IndustryId": 0,
+                            "JobLabel": "",
+                            "NameWithCode": "WEB前端开发(00769)",
+                            "NameWithCodeAndInternalCode": "WEB前端开发(00769)_6000",
+                            "AutoRecommend": false,
+                            "JobCategory": 723,
+                            "RequireStartDate": "\/Date(1481472000000)\/",
+                            "RequireNumber": 1,
+                            "RequireOnboardDate": "\/Date(1475164800000)\/",
+                            "RequireType": null,
+                            "IncludedPickUpService": false,
+                            "JobGrade": 33995,
+                            "JobRangeFilters": [
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 1,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 4,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 3,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 2,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                }
+                            ],
+                            "AgeFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 1,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "DegreeFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 4,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "EnglishLevelFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 3,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "WorkYearFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 2,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "GenderFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 0,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "ApplicationFormSetting": null,
+                            "EvaluationSheetTemplateID": "00000000-0000-0000-0000-000000000000",
+                            "JobLineManagers": [
+                                {
+                                    "Id": 122863,
+                                    "EmployerId": 10000105,
+                                    "JobId": 109707,
+                                    "AccountId": 745,
+                                    "AccountName": "神农admin",
+                                    "CreateDate": "\/Date(-62135596800000)\/"
+                                }
+                            ],
+                            "Images": null
                         },
-                        "ApplicationFormSetting": null,
-                        "EvaluationSheetTemplateID": "00000000-0000-0000-0000-000000000000",
-                        "JobLineManagers": [
-                            {
-                                "Id": 122863,
-                                "EmployerId": 10000105,
-                                "JobId": 109707,
-                                "AccountId": 745,
-                                "AccountName": "神农admin",
-                                "CreateDate": "\/Date(-62135596800000)\/"
-                            }
-                        ],
-                        "Images": null
-                    }
-                ]
+                        {
+                            "PostedSites": {
+                                "51job.com": {
+                                    "Id": 0,
+                                    "JobId": 109707,
+                                    "Site": "51job.com",
+                                    "Result": false,
+                                    "FailedReason": null,
+                                    "CreatedDate": "\/Date(-62135596800000)\/",
+                                    "CreatedBy": null,
+                                    "ServicePlan": null,
+                                    "PostedLink": null,
+                                    "TargetJobId": null,
+                                    "LatestRefreshDate": null,
+                                    "ExpiredDate": "\/Date(1478620800000)\/",
+                                    "EmployerId": 0,
+                                    "PostStatus": 0,
+                                    "BatchId": null,
+                                    "Updated": null,
+                                    "UpdatedBy": null
+                                }
+                            },
+                            "JobLabelNew": null,
+                            "JobPostSite": null,
+                            "DeptName": "中央研究院",
+                            "PublishUserName": "神农admin",
+                            "RecruiterName": "神农admin",
+                            "JobRecruiters": null,
+                            "Id": 104323,
+                            "Name": "WEB前端开发dsdasdasdsadasdasdasdasdas",
+                            "Code": "00769",
+                            "InternalCode": "6000",
+                            "EmployerId": 0,
+                            "DeptId": 2308,
+                            "AreaId": 432,
+                            "RecruitAreaId": 0,
+                            "DetailedWorkAddress": "深圳蛇口信息网谷",
+                            "ParentAreaId": 0,
+                            "Number": 2,
+                            "SalaryLower": 0,
+                            "SalaryUpper": 0,
+                            "Description": " 深圳市",
+                            "Hm": 0,
+                            "Recruiter": 745,
+                            "StartDate": "\/Date(-62135596800000)\/",
+                            "EndDate": "\/Date(1482741173000)\/",
+                            "ReceiveEmail": "karlchen8@163.com",
+                            "PostNumber": 0,
+                            "PostDate": "\/Date(1481531573000)\/",
+                            "PostBy": 0,
+                            "Status": 5,
+                            "WillSoonExpire": false,
+                            "CreatedBy": null,
+                            "CreatedDate": null,
+                            "UpdatedBy": null,
+                            "UpdatedDate": "\/Date(1482131539490)\/",
+                            "RequiredAnswer": 0,
+                            "JobFunctions": null,
+                            "JobTypes": null,
+                            "JobRecruitTypes": null,
+                            "JobRecruiters": null,
+                            "ExpiredDays": 14,
+                            "PublicStatus": 1,
+                            "MatchSettingId": null,
+                            "IndustryId": 0,
+                            "JobLabel": "",
+                            "NameWithCode": "WEB前端开发(00769)",
+                            "NameWithCodeAndInternalCode": "WEB前端开发(00769)_6000",
+                            "AutoRecommend": false,
+                            "JobCategory": 723,
+                            "RequireStartDate": "\/Date(1481472000000)\/",
+                            "RequireNumber": 1,
+                            "RequireOnboardDate": "\/Date(1475164800000)\/",
+                            "RequireType": null,
+                            "IncludedPickUpService": false,
+                            "JobGrade": 33995,
+                            "JobRangeFilters": [
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 1,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 4,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 3,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 2,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                }
+                            ],
+                            "AgeFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 1,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "DegreeFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 4,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "EnglishLevelFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 3,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "WorkYearFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 2,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "GenderFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 0,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "ApplicationFormSetting": null,
+                            "EvaluationSheetTemplateID": "00000000-0000-0000-0000-000000000000",
+                            "JobLineManagers": [
+                                {
+                                    "Id": 122863,
+                                    "EmployerId": 10000105,
+                                    "JobId": 109707,
+                                    "AccountId": 745,
+                                    "AccountName": "神农admin",
+                                    "CreateDate": "\/Date(-62135596800000)\/"
+                                }
+                            ],
+                            "Images": null
+                        },
+                        {
+                            "PostedSites": {
+                                "51job.com": {
+                                    "Id": 0,
+                                    "JobId": 109707,
+                                    "Site": "51job.com",
+                                    "Result": false,
+                                    "FailedReason": null,
+                                    "CreatedDate": "\/Date(-62135596800000)\/",
+                                    "CreatedBy": null,
+                                    "ServicePlan": null,
+                                    "PostedLink": null,
+                                    "TargetJobId": null,
+                                    "LatestRefreshDate": null,
+                                    "ExpiredDate": "\/Date(1478620800000)\/",
+                                    "EmployerId": 0,
+                                    "PostStatus": 0,
+                                    "BatchId": null,
+                                    "Updated": null,
+                                    "UpdatedBy": null
+                                }
+                            },
+                            "JobLabelNew": null,
+                            "JobPostSite": null,
+                            "DeptName": "中央研究院",
+                            "PublishUserName": "神农admin",
+                            "RecruiterName": "神农admin",
+                            "JobRecruiters": null,
+                            "Id": 229707,
+                            "Name": "WEB前端开发dsdasdasdsadasdasdasdasdas",
+                            "Code": "00769",
+                            "InternalCode": "6000",
+                            "EmployerId": 0,
+                            "DeptId": 2308,
+                            "AreaId": 432,
+                            "RecruitAreaId": 0,
+                            "DetailedWorkAddress": "深圳蛇口信息网谷",
+                            "ParentAreaId": 0,
+                            "Number": 2,
+                            "SalaryLower": 0,
+                            "SalaryUpper": 0,
+                            "Description": " 深圳市",
+                            "Hm": 0,
+                            "Recruiter": 745,
+                            "StartDate": "\/Date(-62135596800000)\/",
+                            "EndDate": "\/Date(1482741173000)\/",
+                            "ReceiveEmail": "karlchen8@163.com",
+                            "PostNumber": 0,
+                            "PostDate": "\/Date(1481531573000)\/",
+                            "PostBy": 0,
+                            "Status": 4,
+                            "WillSoonExpire": false,
+                            "CreatedBy": null,
+                            "CreatedDate": null,
+                            "UpdatedBy": null,
+                            "UpdatedDate": "\/Date(1482131539490)\/",
+                            "RequiredAnswer": 0,
+                            "JobFunctions": null,
+                            "JobTypes": null,
+                            "JobRecruitTypes": null,
+                            "JobRecruiters": null,
+                            "ExpiredDays": 14,
+                            "PublicStatus": 1,
+                            "MatchSettingId": null,
+                            "IndustryId": 0,
+                            "JobLabel": "",
+                            "NameWithCode": "WEB前端开发(00769)",
+                            "NameWithCodeAndInternalCode": "WEB前端开发(00769)_6000",
+                            "AutoRecommend": false,
+                            "JobCategory": 723,
+                            "RequireStartDate": "\/Date(1481472000000)\/",
+                            "RequireNumber": 1,
+                            "RequireOnboardDate": "\/Date(1475164800000)\/",
+                            "RequireType": null,
+                            "IncludedPickUpService": false,
+                            "JobGrade": 33995,
+                            "JobRangeFilters": [
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 1,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 4,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 3,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 2,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                }
+                            ],
+                            "AgeFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 1,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "DegreeFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 4,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "EnglishLevelFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 3,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "WorkYearFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 2,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "GenderFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 0,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "ApplicationFormSetting": null,
+                            "EvaluationSheetTemplateID": "00000000-0000-0000-0000-000000000000",
+                            "JobLineManagers": [
+                                {
+                                    "Id": 122863,
+                                    "EmployerId": 10000105,
+                                    "JobId": 109707,
+                                    "AccountId": 745,
+                                    "AccountName": "神农admin",
+                                    "CreateDate": "\/Date(-62135596800000)\/"
+                                }
+                            ],
+                            "Images": null
+                        },
+                        {
+                            "PostedSites": {
+                                "51job.com": {
+                                    "Id": 0,
+                                    "JobId": 109707,
+                                    "Site": "51job.com",
+                                    "Result": false,
+                                    "FailedReason": null,
+                                    "CreatedDate": "\/Date(-62135596800000)\/",
+                                    "CreatedBy": null,
+                                    "ServicePlan": null,
+                                    "PostedLink": null,
+                                    "TargetJobId": null,
+                                    "LatestRefreshDate": null,
+                                    "ExpiredDate": "\/Date(1478620800000)\/",
+                                    "EmployerId": 0,
+                                    "PostStatus": 0,
+                                    "BatchId": null,
+                                    "Updated": null,
+                                    "UpdatedBy": null
+                                }
+                            },
+                            "JobLabelNew": null,
+                            "JobPostSite": null,
+                            "DeptName": "中央研究院",
+                            "PublishUserName": "神农admin",
+                            "RecruiterName": "神农admin",
+                            "JobRecruiters": null,
+                            "Id": 133707,
+                            "Name": "WEB前端开发dsdasdasdsadasdasdasdasdas",
+                            "Code": "00769",
+                            "InternalCode": "6000",
+                            "EmployerId": 0,
+                            "DeptId": 2308,
+                            "AreaId": 432,
+                            "RecruitAreaId": 0,
+                            "DetailedWorkAddress": "深圳蛇口信息网谷",
+                            "ParentAreaId": 0,
+                            "Number": 2,
+                            "SalaryLower": 0,
+                            "SalaryUpper": 0,
+                            "Description": " 深圳市",
+                            "Hm": 0,
+                            "Recruiter": 745,
+                            "StartDate": "\/Date(-62135596800000)\/",
+                            "EndDate": "\/Date(1482741173000)\/",
+                            "ReceiveEmail": "karlchen8@163.com",
+                            "PostNumber": 0,
+                            "PostDate": "\/Date(1481531573000)\/",
+                            "PostBy": 0,
+                            "Status": 3,
+                            "WillSoonExpire": false,
+                            "CreatedBy": null,
+                            "CreatedDate": null,
+                            "UpdatedBy": null,
+                            "UpdatedDate": "\/Date(1482131539490)\/",
+                            "RequiredAnswer": 0,
+                            "JobFunctions": null,
+                            "JobTypes": null,
+                            "JobRecruitTypes": null,
+                            "JobRecruiters": null,
+                            "ExpiredDays": 14,
+                            "PublicStatus": 1,
+                            "MatchSettingId": null,
+                            "IndustryId": 0,
+                            "JobLabel": "",
+                            "NameWithCode": "WEB前端开发(00769)",
+                            "NameWithCodeAndInternalCode": "WEB前端开发(00769)_6000",
+                            "AutoRecommend": false,
+                            "JobCategory": 723,
+                            "RequireStartDate": "\/Date(1481472000000)\/",
+                            "RequireNumber": 1,
+                            "RequireOnboardDate": "\/Date(1475164800000)\/",
+                            "RequireType": null,
+                            "IncludedPickUpService": false,
+                            "JobGrade": 33995,
+                            "JobRangeFilters": [
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 1,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 4,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 3,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                },
+                                {
+                                    "JobId": 0,
+                                    "Id": 0,
+                                    "FilterType": 2,
+                                    "MinValue": null,
+                                    "MaxValue": null,
+                                    "Schema": 0
+                                }
+                            ],
+                            "AgeFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 1,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "DegreeFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 4,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "EnglishLevelFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 3,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "WorkYearFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 2,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "GenderFilter": {
+                                "JobId": 0,
+                                "Id": 0,
+                                "FilterType": 0,
+                                "MinValue": null,
+                                "MaxValue": null,
+                                "Schema": 0
+                            },
+                            "ApplicationFormSetting": null,
+                            "EvaluationSheetTemplateID": "00000000-0000-0000-0000-000000000000",
+                            "JobLineManagers": [
+                                {
+                                    "Id": 122863,
+                                    "EmployerId": 10000105,
+                                    "JobId": 109707,
+                                    "AccountId": 745,
+                                    "AccountName": "神农admin",
+                                    "CreateDate": "\/Date(-62135596800000)\/"
+                                }
+                            ],
+                            "Images": null
+                        }
+                    ]
+                }
             }
         }
     ]

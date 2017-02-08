@@ -3,6 +3,9 @@
 .jobs-search-form {
     .el-form-item {
         margin-bottom: 0;
+        &.more-search-btn {
+            cursor: pointer;
+        }
         .icon-shaixuan, .icon-sort {
             font-size: 24px;
             color: #ccc;
@@ -26,6 +29,28 @@
     }
 }
 
+//筛选条件
+.search-criteria-layer {
+    position: absolute;
+    right: -500px;
+    top: 70px;
+    width: 500px;
+    height: 100%;
+}
+
+//工具栏
+.tools-list {
+
+}
+
+.check-column-popover {
+    .el-checkbox {
+        margin-left: 15px;
+        width: 108px;
+    }
+}
+
+//查询列表
 .jobs-list {
     margin-bottom: 20px;
     > ul {
@@ -134,16 +159,16 @@
                 color: #fff;
             }
         }
-        .el-dialog__body{
+        .el-dialog__body {
             width: 1000px;
             margin: 20px auto;
             background-color: #fff;
-            .panel.progress{
+            .panel.progress {
                 padding-top: 20px;
-                .el-row{
+                .el-row {
                     height: 30px;
-                    &:first-child{
-                        .el-button{
+                    &:first-child {
+                        .el-button {
                             margin-top: -7px;
                         }
                     }

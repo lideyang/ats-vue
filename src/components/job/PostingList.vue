@@ -6,7 +6,7 @@
                 <li v-for="item in jobsList.items">
                     <el-row>
                         <el-col :span="1" class="all-check">
-                            <el-checkbox v-model="item.checked" name="check"></el-checkbox>
+                            <el-checkbox v-model="item.checked" @change="allCheckListCities" name="check"></el-checkbox>
                         </el-col>
                         <el-col :span="19" class="info">
                             <div>
@@ -77,9 +77,14 @@
                 </li>
             </ul>
             <!--表格视图-->
-            <el-table v-if="jobsList.listView==='table'" :data="jobsList.items" stripe>
-                <el-table-column type="selection" width="55"></el-table-column>
-                <el-table-column v-for="column in jobsList.column" v-if="column.isShow" :prop="column.EN" :label="column.name">
+            <el-table v-if="jobsList.listView==='table'" style="width: 100%" :data="jobsList.items" stripe>
+                <!--<el-table-column fixed type="selection" width="55"></el-table-column>-->
+                <el-table-column fixed width="55">
+                    <template scope="scope">
+                        <el-checkbox v-model="scope.row.checked" @change="allCheckListCities" name="check"></el-checkbox>
+                    </template>
+                </el-table-column>
+                <el-table-column v-for="column in tableViewColumn" :prop="column.EN" :label="column.name" width="200" show-overflow-tooltip>
                 </el-table-column>
             </el-table>
         </div>
@@ -104,6 +109,7 @@
     import {
         Form, FormItem, Select, Option, Input, Row, Col, Checkbox, Button, Pagination, Table, TableColumn
     } from 'element-ui'
+    import {formatDate} from '../../utils/tools'
     Vue.component(Form.name, Form)
     Vue.component(FormItem.name, FormItem)
     Vue.component(Select.name, Select)
@@ -119,15 +125,12 @@
     export default{
         name: 'PostingList',
         props: {
-            items: Array,
-
+            jobsList: {
+                type: Object
+            },
             pageNo: {
                 type: Number,
                 default: 1
-            },
-            allChecked: {
-                type: Boolean,
-                default: false
             },
             pageSize: {
                 type: Number,
@@ -148,10 +151,11 @@
             }
         },
         computed: {
-            ...mapState({
-                jobsList: ({jobs}) => jobs.jobsList,
-                selectOpt: ({jobs})=>jobs.selectOpt
-            })
+            tableViewColumn(){
+                return this.jobsList.column.filter(function(item){
+                    return item.isShow
+                })
+            }
         },
         methods: {
 
@@ -165,12 +169,8 @@
             doneJobInfo(jobId) {
                 return this.$store.getters.doneJobInfo(jobId)
             },
-            filterTableView(column){
-                if(column.EN === 'StartDate' || column.EN === 'EndDate'){
-                  return eval(column)
-                }
-            },
-            ...mapActions(['showJobInfoFrom'])
+            ...mapActions(['showJobInfoFrom', 'allCheckListCities'])
+
         },
         components: {}
     }

@@ -10,11 +10,11 @@
                             <el-input v-model="addJob.addForm.jobName" auto-complete="off"></el-input>
                         </el-form-item>
                         <el-form-item label="招聘对象" :label-width="addJob.formLabelWidth">
-                            <el-radio-group v-model="addJob.addForm.obj">
-                                <el-radio-button label="全职"></el-radio-button>
-                                <el-radio-button label="兼职"></el-radio-button>
-                                <el-radio-button label="实习生"></el-radio-button>
-                            </el-radio-group>
+                            <el-checkbox-group class="radio-apply-checkbox-group" v-model="addJob.addForm.obj">
+                                <el-checkbox label="全职"></el-checkbox>
+                                <el-checkbox label="兼职"></el-checkbox>
+                                <el-checkbox label="实习生"></el-checkbox>
+                            </el-checkbox-group>
                         </el-form-item>
                         <el-form-item label="招聘类别" :label-width="addJob.formLabelWidth">
                             <el-radio-group v-model="addJob.addForm.sort">
@@ -30,7 +30,7 @@
                             </el-select>
                         </el-form-item>
                         <el-form-item label="工作地区" :label-width="addJob.formLabelWidth">
-                            <el-select v-model="value7" placeholder="请选择">
+                            <el-select v-model="addJob.addForm.jobArea" placeholder="请选择">
                                 <el-option-group
                                     v-for="group in selectOpt.area"
                                     :label="group.label">
@@ -206,15 +206,16 @@
         data(){
             return {
                 signSelectModel: [],
-                recruiterSelectModel: [],
-                radio3: '保密'
+                recruiterSelectModel: []
             }
         },
-        computed: {
-            ...mapState({
-                addJob: ({jobs})=>jobs.addJob,
-                selectOpt: ({jobs})=>jobs.selectOpt
-            })
+        props: {
+            addJob: {
+                type: Object
+            },
+            selectOpt: {
+                type: Object
+            }
         },
         components: {},
         methods: {

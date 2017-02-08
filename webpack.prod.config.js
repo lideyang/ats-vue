@@ -1,15 +1,10 @@
-var path = require("path"),
-    webpack = require("webpack"),
-    proxy = require("./proxy");
+var path = require('path'),
+    webpack = require('webpack')
 
 var SRC_PATH = path.join(__dirname, 'src'),
-    DIST_PATH = path.join(__dirname, './dist'),
-    CONTENT_HASH_TAG = '_[contenthash:5]',
-    CHUNK_FILE_HASH_TAG = '_[chunkhash:5]';
+    DIST_PATH = path.join(__dirname, './dist')
 
-var HtmlWebpackPlugin = require('html-webpack-plugin'),
-    ExtractTextPlugin = require("extract-text-webpack-plugin"),
-    WebpackMd5Hash = require('webpack-md5-hash');
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 
 var config = {
@@ -28,13 +23,13 @@ var config = {
 
     resolve: {
         alias: {},
-        extensions: ["", ".less", ".css", ".js", ".vue", ".json"]
+        extensions: ['', '.less', '.css', '.js', '.vue', '.json']
     },
 
     output: {
         path: DIST_PATH,
         publicPath: '/public/dist/',
-        filename: `js/[name].js`
+        filename: 'js/[name].js'
     },
 
     clearBeforeBuild: true,
@@ -48,11 +43,11 @@ var config = {
 
         new webpack.optimize.CommonsChunkPlugin(
             'vendors',
-            `js/vendors.js`,
+            'js/vendors.js',
             Infinity
         ),
 
-        new ExtractTextPlugin(`css/commons.css`),
+        new ExtractTextPlugin('css/commons.css'),
 
         new webpack.optimize.UglifyJsPlugin({
             comments: false,
@@ -66,7 +61,7 @@ var config = {
         loaders: [
             {
                 test: /\.js$/,
-                loader: "babel",
+                loader: 'babel',
                 exclude: /node_modules/
             },
             {
@@ -75,20 +70,20 @@ var config = {
             },
             {
                 test: /\.css$/,
-                loader: "style!css!autoprefixer"
+                loader: 'style!css!autoprefixer'
             },
             {
                 test: /\.(png|jpg|gif)$/,
-                loader: "url",
+                loader: 'url',
                 query: {
                     limit: 8192,
-                    name: `images/[name].[ext]`
+                    name: 'images/[name].[ext]'
                 }
             },
 
             {
                 test: /\.(eot|woff|woff2|ttf|svg)/,
-                loader: "url",
+                loader: 'url',
                 query: {
                     limit: 100,
                     name: 'fonts/[name].[ext]'

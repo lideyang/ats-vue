@@ -6,16 +6,16 @@
                 <el-row>
                     <el-col :span="14">
                         <el-form-item label="职位状态">
-                            <el-select v-model="jobStatusSelectModel" placeholder="请选择职位状态">
+                            <el-select v-model="searchCriteria.jobStatus" placeholder="请选择职位状态" @change="handleSearchSubmit">
                                 <el-option
-                                    v-for="item in jobSelectOptions"
+                                    v-for="item in selectOpt.jobStatus"
                                     :label="item.label"
                                     :value="item.value">
                                 </el-option>
                             </el-select>
                         </el-form-item>
                         <el-form-item label="招聘专员">
-                            <el-select v-model="recruiterSelectModel" placeholder="选择人员">
+                            <el-select v-model="searchCriteria.recruiter" placeholder="选择人员" @change="handleSearchSubmit">
                                 <el-option
                                     v-for="item in selectOpt.recruiter"
                                     :label="item.label"
@@ -24,12 +24,12 @@
                             </el-select>
                         </el-form-item>
                         <el-form-item label="职位">
-                            <el-input v-model="input" placeholder="请输入内容"></el-input>
+                            <el-input v-model="searchCriteria.jobName" placeholder="请输入内容" @blur="handleSearchSubmit"></el-input>
                         </el-form-item>
                     </el-col>
                     <el-col :span="6" class="more">
-                        <el-form-item label="" label-width="0px">
-                            <i class="vertical-middle iconfont icon-shaixuan"></i><span class="vertical-middle">更多筛选</span>
+                        <el-form-item class="more-search-btn" label="" label-width="0px">
+                            <i class="vertical-middle iconfont icon-shaixuan"></i><span class="vertical-middle" @click="showMoreSearchLayer">更多筛选</span>
                         </el-form-item>
                         <el-form-item label="" label-width="0px">
                             <i class="vertical-middle iconfont icon-sort"></i><span class="vertical-middle">排序</span>
@@ -45,10 +45,10 @@
             </el-form>
         </div>
         <!--搜索工具-->
-        <div class="panel">
+        <div class="panel tools-list">
             <el-row>
                 <el-col :span="1">
-                    <el-checkbox @change="allCheckListTrigger"></el-checkbox>
+                    <el-checkbox :indeterminate="jobsList.isIndeterminate" v-model="jobsList.allChecked" @change="allCheckListTrigger"></el-checkbox>
                 </el-col>
                 <el-col :span="18">
                     <el-button>分发</el-button>
@@ -63,32 +63,28 @@
                         <i class="iconfont icon-liebiao"></i></el-button>
                     <el-button class="icon" :type="jobsList.listView==='table'?'primary':'default'" data-type="table" @click="changeJobListView">
                         <i class="iconfont icon-wangge"></i></el-button>
-                    <el-button class="icon" v-if="jobsList.listView==='table'" :type="jobsList.listView==='table'?'primary':'default'" data-type="table" @click="changeJobListView" v-popover:popoverSetting>
-                        <i class="iconfont icon-setting"></i></el-button>
                     <el-popover
                         ref="popoverSetting"
-                        placement="right"
+                        placement="left"
                         width="400"
                         trigger="click">
-                        <el-table :data="gridData">
-                            <el-checkbox-group v-model="checkList">
-                                <el-checkbox label="复选框 A"></el-checkbox>
-                                <el-checkbox label="复选框 B"></el-checkbox>
-                                <el-checkbox label="复选框 C"></el-checkbox>
-                                <el-checkbox label="禁用" disabled></el-checkbox>
-                                <el-checkbox label="选中且禁用" disabled></el-checkbox>
-                            </el-checkbox-group>
-                        </el-table>
+                        <div class="check-column-popover">
+                            <el-checkbox v-for="column in jobsList.column" v-model="column.isShow">{{column.name}}</el-checkbox>
+                        </div>
                     </el-popover>
+                    <el-button class="icon" v-show="jobsList.listView==='table'" :type="jobsList.listView==='table'?'primary':'default'" data-type="table" v-popover:popoverSetting>
+                        <i class="iconfont icon-setting"></i></el-button>
                 </el-col>
             </el-row>
         </div>
         <!--搜索列表-->
-        <posting-list :items="jobsList.items" :allChecked="jobsList.allChecked"></posting-list>
+        <posting-list :jobsList="jobsList" :allChecked="jobsList.allChecked"></posting-list>
         <!--发布职位灯箱-->
-        <add-job-dialog/>
+        <add-job-dialog :addJob="addJob" :selectOpt="selectOpt"/>
         <!--职位详情灯箱-->
-        <job-info-dialog/>
+        <job-info-dialog :jobInfo="jobInfo" />
+        <!--筛选侧边栏-->
+        <search-criteria :searchCriteria="searchCriteria" />
     </div>
 </template>
 
@@ -97,11 +93,12 @@
     import {mapActions, mapState} from 'vuex'
     import {
         Form, FormItem, Select, Option, Input, Row, Col, Checkbox, Button, Dialog, Radio, RadioGroup, RadioButton,
-        OptionGroup, Tooltip, Popover
+        OptionGroup, Tooltip, Popover, CheckboxGroup
     } from 'element-ui'
     import PostingList from '../../components/job/PostingList'
     import AddJobDialog from '../../components/job/AddJobDialog'
     import JobInfoDialog from '../../components/job/JobInfoDialog'
+    import SearchCriteria from '../../components/job/SearchCriteria'
     Vue.component(Form.name, Form)
     Vue.component(FormItem.name, FormItem)
     Vue.component(Select.name, Select)
@@ -118,32 +115,18 @@
     Vue.component(OptionGroup.name, OptionGroup)
     Vue.component(Tooltip.name, Tooltip)
     Vue.component(Popover.name, Popover)
+    Vue.component(CheckboxGroup.name, CheckboxGroup)
     export default {
 
         name: 'JobPosting',
         components: {
             PostingList,
             AddJobDialog,
-            JobInfoDialog
+            JobInfoDialog,
+            SearchCriteria
         },
         data() {
             return {
-                jobSelectOptions: [{
-                    value: '1',
-                    label: '发布中'
-                }, {
-                    value: '2',
-                    label: '已发布'
-                }, {
-                    value: '3',
-                    label: '已完成'
-                }, {
-                    value: '4',
-                    label: '未完成'
-                }, {
-                    value: '5',
-                    label: '已入职'
-                }],
                 jobStatusSelectModel: '',
                 recruiterSelectModel: ''
             }
@@ -154,20 +137,30 @@
         computed: {
             ...mapState({
                 jobsList: ({jobs}) => jobs.jobsList,
-                addJob: ({jobs})=>jobs.addJob,
-                jobInfo: ({jobs})=>jobs.jobInfo,
-                selectOpt: ({jobs})=>jobs.selectOpt
+                searchCriteria: ({jobs}) => jobs.searchCriteria,
+                addJob: ({jobs}) => jobs.addJob,
+                jobInfo: ({jobs}) => jobs.jobInfo,
+                selectOpt: ({jobs}) => jobs.selectOpt
             })
         },
         methods: {
+            handleSearchSubmit(event){
+                this.refreshPage(this.searchCriteria);
+            },
+            handleMoreSearch(event){
+
+            },
             refreshPage(otherParams = {}){
+                console.log(this.searchCriteria);
                 otherParams = {...otherParams, ...{status: '5'}};
                 this.showPageLoading();
-                this.getJobsList(otherParams).then(()=>{
+                this.getJobsList(otherParams).then(() =>{
                     this.hidePageLoading();
                 });
             },
-            ...mapActions(["showPageLoading", "hidePageLoading", "getJobsList", 'allCheckListTrigger', 'showAddJobFrom', 'changeJobListView'])
+            ...mapActions(["showPageLoading", "hidePageLoading", "getJobsList", 'allCheckListTrigger',
+                'showAddJobFrom', 'changeJobListView', 'changeJobTableViewColumn','showMoreSearchLayer'
+            ])
         },
     };
 </script>
